@@ -1,0 +1,333 @@
+extends ./template/template.jade
+
+block title
+	title Главная страница
+
+block content
+	header
+		.container
+			.logo.header__logo
+				img(src="img/logo.png", alt="").logo__picture
+				span.logo__text Здоровье
+			ul.main-menu.header__main-menu
+				li.main-menu__item
+					a(href="#").main-menu__link Пансионаты
+				li.main-menu__item
+					a(href="#").main-menu__link Новости и акции
+				li.main-menu__item
+					a(href="#").main-menu__link Корпоротивным клиентам
+				li.main-menu__item
+					a(href="#").main-menu__link Турагенствам
+				li.main-menu__item
+					a(href="#").main-menu__link О компании
+				li.main-menu__item
+					a(href="#").main-menu__link Контакты
+			a(href="#").header__search
+				i.icon.icon_search
+			.header__datetime
+				span.header__time 11:28
+				span.header__date 26 декабря
+			.header__call
+				span.header__call-label Звоните круглосуточно:
+				a(href="tel:84959918855").header__phone (495) 991-88-55
+
+	.slider
+		.slides
+			.slides__item
+				.container
+					h2.slides__title Каникулы в &#171;Зените&#187;
+					p.slides__description Приглашаем отметить Новый год в пансионате всей семьёй и провести новогодний отпуск на берегу моря
+			.slides__item
+				.container
+					h2.slides__title Каникулы в &#171;Зените&#187;
+					p.slides__description Приглашаем отметить Новый год в пансионате всей семьёй и провести новогодний отпуск на берегу моря
+			.slides__item
+				.container
+					h2.slides__title Каникулы в &#171;Зените&#187;
+					p.slides__description Приглашаем отметить Новый год в пансионате всей семьёй и провести новогодний отпуск на берегу моря
+			.slides__item
+				.container
+					h2.slides__title Каникулы в &#171;Зените&#187;
+					p.slides__description Приглашаем отметить Новый год в пансионате всей семьёй и провести новогодний отпуск на берегу моря
+		.slider__search
+			.container
+				form(action="/").search-form
+					h3.search-form__title Найдите лучшие предложения
+					p.search-form__description в пансионатах ОАК
+					.search-form__control
+						label(for="datein").search-form__label Дата заезда
+						input(type="text")#datein.search-form__input
+					.search-form__control
+						label(for="dateout").search-form__label Дата отъезда
+						input(type="text")#dateout.search-form__input
+					.search-form__control
+						label(for="people").search-form__label Количество гостей
+						select(name="people")#people.search-form__select
+							option(value="1") 1
+							option(value="2") 2
+							option(value="3") 3
+							option(value="4") 4
+							option(value="5") 5
+					.search-form__control
+						button(type="submit").search-form__button Найти
+		.slides-nav.slides__nav
+			.container
+				i.icon.icon_s-prev.slides-nav__prev
+				.slides-nav__dots
+
+				i.icon.icon_s-next.slides-nav__next
+
+	.main-content
+		.container
+			a(href="#").book-in-site
+				i.icon.icon_book.book-in-site__icon
+				span.book-in-site__text Забронируйте номер прямо на сайте. Оставьте заявку просто и быстро.
+			.cards
+				.card
+					.card__heading
+						a(href="#").card__link
+							h2.card__title Пансионат "Зенит"
+							span.card__addres Республика Крым, Морское
+					.card__slides
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide1.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide2.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide3.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide4.jpg", alt="")
+					.card__nav
+						i.icon.icon_prev.card__nav-prev
+						i.icon.icon_next.card__nav-next
+				.card.card_margin
+					.card__heading
+						a(href="#").card__link
+							h2.card__title Пансионат "Зенит"
+							span.card__addres Республика Крым, Морское
+					.card__slides
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide1.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide2.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide3.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide4.jpg", alt="")
+					.card__nav
+						i.icon.icon_prev.card__nav-prev
+						i.icon.icon_next.card__nav-next
+				.card
+					.card__heading
+						a(href="#").card__link
+							h2.card__title Пансионат "Зенит"
+							span.card__addres Республика Крым, Морское
+					.card__slides
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide1.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide2.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide3.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide4.jpg", alt="")
+					.card__nav
+						i.icon.icon_prev.card__nav-prev
+						i.icon.icon_next.card__nav-next
+				.card
+					.card__heading
+						a(href="#").card__link
+							h2.card__title Пансионат "Зенит"
+							span.card__addres Республика Крым, Морское
+					.card__slides
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide1.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide2.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide3.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide4.jpg", alt="")
+					.card__nav
+						i.icon.icon_prev.card__nav-prev
+						i.icon.icon_next.card__nav-next
+				.card.card_margin
+					.card__heading
+						a(href="#").card__link
+							h2.card__title Пансионат "Зенит"
+							span.card__addres Республика Крым, Морское
+					.card__slides
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide1.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide2.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide3.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide4.jpg", alt="")
+					.card__nav
+						i.icon.icon_prev.card__nav-prev
+						i.icon.icon_next.card__nav-next
+				.card
+					.card__heading
+						a(href="#").card__link
+							h2.card__title Пансионат "Зенит"
+							span.card__addres Республика Крым, Морское
+					.card__slides
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide1.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide2.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide3.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide4.jpg", alt="")
+					.card__nav
+						i.icon.icon_prev.card__nav-prev
+						i.icon.icon_next.card__nav-next
+				.card
+					.card__heading
+						a(href="#").card__link
+							h2.card__title Пансионат "Зенит"
+							span.card__addres Республика Крым, Морское
+					.card__slides
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide1.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide2.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide3.jpg", alt="")
+						.card__slide
+							a(href="#").card__link
+								img(src="img/slide4.jpg", alt="")
+					.card__nav
+						i.icon.icon_prev.card__nav-prev
+						i.icon.icon_next.card__nav-next
+				.main-company
+					.main-company__heading
+						a(href="#").main-company__link
+							h2.main-company__title Базы отдыха ОАК
+					.main-company__content
+						p.main-company__text Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пор лучше своих текстов путь которой последний то свою буквенных предупреждал, за его которое злых.
+						p.main-company__text Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Безопасную оксмокс, знаках путь грамматики.
+						p.main-company__text  Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+
+
+			.main-news
+				ul.main-news__nav
+					li.main-news__item
+						a(href="#").main-news__link.active Новости
+						span.main-news__slash /
+					li.main-news__item
+						a(href="#").main-news__link Статьи
+				.main-news__news
+					.article.article_first(style="background-image: url('img/article.jpg');")
+						a(href="#").article__link
+							snap.article__date 6.12.2015
+							h3.article__title Каникулы "Дикий запад" в "Зените"
+					.article(style="background-image: url('img/article1.jpg');")
+						a(href="#").article__link
+							snap.article__date 6.12.2015
+							h3.article__title Пансионат "Кулон" разыграл путевки для всей семьи
+					.article(style="background-image: url('img/article2.jpg');")
+						a(href="#").article__link
+							snap.article__date 6.12.2015
+							h3.article__title Каникулы "Дикий запад" в "Зените"
+					.article.article_last(style="background-image: url('img/article3.jpg');")
+						a(href="#").article__link
+							snap.article__date 6.12.2015
+							h3.article__title Каникулы "Дикий запад" в "Зените"
+
+			.client-slider
+				i.icon.icon_c-prev.client-slider__prev
+				.client-slider__clients
+					.client
+						.client__item
+							img(src="img/client/rgd.png", alt="").client__image
+						.client__item
+							img(src="img/client/skf.png", alt="").client__image
+						.client__item
+							img(src="img/client/gaz.png", alt="").client__image
+						.client__item
+							img(src="img/client/sogaz.png", alt="").client__image
+						.client__item
+							img(src="img/client/ttk.png", alt="").client__image
+						.client__item
+							img(src="img/client/rgd.png", alt="").client__image
+						.client__item
+							img(src="img/client/rgd.png", alt="").client__image
+						.client__item
+							img(src="img/client/rgd.png", alt="").client__image
+				i.icon.icon_c-next.client-slider__next
+
+			.subscription
+				.subscription__heading
+					h2.subscription__title Узнавай о выгодных предложениях первым
+					p.subscription__description Подпишись на рассылку новостей и статей
+				form(action="").subscription__form
+					input(type="text" placeholder="Адрес электронной почты").subscription__input
+					button(type="submit").subscription__button Подписаться
+
+	footer
+		.container
+			.footer__top
+				.footer__side.footer__side_left
+					img(src="img/logo-footer.png", alt="")
+				.footer__side.footer__side_right
+					a(href="#").footer__article Статьи
+					span.join__title Присоединяйтесь:
+					ul.join.footer__join
+						li.join__item
+							a(href="#").join__link
+								i.icon.icon_vk
+						li.join__item
+							a(href="#").join__link
+								i.icon.icon_fb
+						li.join__item
+							a(href="#").join__link
+								i.icon.icon_tw
+			.footer__bottom
+				p.copyright &copy; 2015. Пансионаты ОАК. Все права защищены.
+				p.copyright Воспроизведение или распростронение материалов в любой форме может производиться только с письменного разрешения ОАК.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

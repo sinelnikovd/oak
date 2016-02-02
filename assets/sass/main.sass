@@ -1,0 +1,609 @@
+@import "bourbon"
+@import "_normalize.sass"
+@import "_vars.sass"
+@import "_fonts.sass"
+
+@import "libs/sprite.sass"
+@import "libs/owl.carousel.sass"
+
+
+*::-webkit-input-placeholder
+	color: #424242
+	opacity: 1
+
+
+*:-moz-placeholder
+	color: #424242
+	opacity: 1
+
+*::-moz-placeholder
+	color: #424242
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #424242
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #424242
+
+body input:required:valid,
+body textarea:required:valid
+	color: #424242
+
+body
+	font-size: 14px
+	min-width: 1200px
+	position: relative
+	line-height: 1.3
+	font-family: Arial , $helvetica
+	font-weight: normal
+	overflow-x: hidden
+	color: #151515
+	position: relative
+
+.container
+	width: 1300px
+	margin: 0 auto
+	padding: 0 10px
+	box-sizing: border-box
+
+/* icon */
+.icon
+	display: inline-block
+.icon_search
+	+sprite($s-search)
+.icon_s-next
+	+sprite($s-s-next)
+.icon_s-prev
+	+sprite($s-s-prev)
+.icon_book
+	+sprite($s-book)
+.icon_next
+	+sprite($s-next)
+.icon_prev
+	+sprite($s-prev)
+.icon_c-next
+	+sprite($s-c-next)
+.icon_c-prev
+	+sprite($s-c-prev)
+.icon_vk
+	+sprite($s-vk-gray)
+	&:hover
+		+sprite($s-vk-color)
+.icon_fb
+	+sprite($s-fb-gray)
+	&:hover
+		+sprite($s-fb-color)
+.icon_tw
+	+sprite($s-tw-gray)
+	&:hover
+		+sprite($s-tw-color)
+/* end icon */
+
+/* BEGIN LOGO*/
+.logo__text
+	font-size: 25px
+	font-family: "HeliosCondBoldItalic" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	vertical-align: bottom
+	margin-left: 10px
+	color: #5f6971
+/* END LOGO */
+
+/* BEGIN MAIN-MENU */
+.main-menu
+	list-style-type: none
+	margin: 0
+	padding: 0 0 0 30px
+	+clearfix
+.main-menu__item
+	float: left
+.main-menu__link
+	font-size: 13px
+	font-family: "HeliosCondBold" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	text-decoration: none
+	color: #5f6971
+	display: block
+	padding: 42px 12px 23px
+	&:hover
+		background-color: #eef1f3
+/* END MAIN-MENU */
+
+/* BEGIN HEADER */
+header
+	background-color: #fff
+	box-shadow: 0 0 5px #010202
+	position: relative
+	z-index: 1
+	+clearfix
+.header__logo
+	float: left
+	padding: 20px 0
+.header__main-menu,
+.header__search,
+.header__datetime,
+.header__call,
+	float: left
+.header__search
+	display: block
+	padding: 40px 21px 18px
+	text-decoration: none
+	&:hover
+		background-color: #eef1f3
+.header__datetime
+	background-color: #eef1f3
+	padding: 19px 10px 22px
+	text-align: center
+	margin-left: 10px
+.header__time
+	display: block
+	font-size: 17px
+.header__date
+	display: block
+	color: #6a747c
+	font-size: 11px
+	margin-top: 4px
+.header__call
+	padding: 20px 0 0 17px
+	text-align: right
+.header__call-label
+	display: block
+	font-size: 12px
+	color: #6a747c
+	line-height: 1
+.header__phone
+	display: block
+	font-size: 21px
+	font-family: "HeliosCondBold" , $helvetica
+	font-weight: normal
+	color: #3d5390
+	line-height: 1
+	margin-top: 5px
+	text-decoration: none
+
+/* END HEADER */
+
+
+/* BEGIN SLIDES */
+.slides
+	position: absolute
+	width: 100%
+	z-index: 0
+	height: 930px
+.slides__item
+	background-image: url('img/slide.jpg')
+	background-position: center center
+	background-size: cover
+	height: 930px
+	padding-top: 190px
+.slides__title
+	margin: 0
+	font-size: 51px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	color: #fff
+	text-shadow: 1px 1px 0 #010202
+	padding-left: 20px
+	box-sizing: border-box
+.slides__description
+	margin: 15px 0 0
+	width: 420px
+	font-size: 17px
+	font-family: "HelveticaNeueRoman" , $helvetica
+	font-weight: normal
+	color: #fff
+	padding-left: 20px
+	box-sizing: border-box
+.slides__nav
+	position: relative
+	z-index: 2
+/* END SLIDES*/
+
+
+/* BEGIN SLIDES-NAV */
+.slides-nav
+	width: 100%
+	text-align: center
+.slides-nav__prev,
+.slides-nav__next
+	cursor: pointer
+.slides-nav__dots
+	display: inline
+/* END SLIDES-NAV */
+
+
+/* BEGIN SLIDER */
+.slider
+	position: relative
+	+clearfix
+.slider__search
+	+clearfix
+
+
+
+.search-form
+	position: relative
+	z-index: 1
+	width: 275px
+	background-color: #eef1f3
+	float: right
+	margin: 50px 25px 0 0
+	border-radius: 5px
+	padding: 15px 20px 22px
+	box-sizing: border-box
+.search-form__title
+	margin: 0
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+.search-form__description
+	margin: 3px 0 0
+	font-size: 11px
+	color: #6a747c
+.search-form__control
+	margin-top: 20px
+.search-form__label
+	width: 100%
+	display: block
+	font-size: 11px
+.search-form__input
+	margin-top: 10px
+	width: 100%
+	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+.search-form__select
+	height: 36px
+.search-form__button
+	width: 170px
+	height: 39px
+/* END SLIDER */
+
+/* BEGIN MAIN-CONTENT */
+.main-content
+	position: relative
+	z-index: 2
+	margin-top: 35px
+/* END MAIN-CONTENT */
+
+/* BEGIN BOOK-IN-SITE */
+.book-in-site
+	display: block
+	width: 100%
+	padding: 18px 0 16px
+	border-radius: 5px
+	background-color: rgba(238,241,243,.45)
+	text-align: center
+	text-decoration: none
+	color: #506982
+.book-in-site__icon
+	vertical-align: middle
+.book-in-site__text
+	margin-left: 20px
+	vertical-align: middle
+	font-size: 15px
+/* END BOOK-IN-SITE */
+
+/* BEGIN CARDs */
+.cards
+	margin-top: 23px
+	+clearfix
+.card
+	float: left
+	width: 410px
+	border-radius: 5px
+	background-color: #fdfdfd
+	margin-bottom: 40px
+	overflow: hidden
+	box-shadow: 1px 1px 4px rgba(0,0,0,.25)
+	position: relative
+.card_margin
+	margin: 0 25px
+.card__link
+	display: block
+	color: #151515
+	text-decoration: none
+.card__heading
+	padding: 21px 25px 18px
+	border-bottom: 1px solid #cccfd1
+	box-sizing: border-box
+	+clearfix
+.card__title
+	margin: 0
+	font-size: 18px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	display: inline-block
+	border-bottom: 1px solid #cccfd1
+	box-sizing: border-box
+.card__addres
+	font-size: 12px
+	color: #a9a9a9
+	padding-top: 7px
+	float: right
+.card__slides
+	width: 410px
+	height: 257px
+	border-radius: 0 0 5px 5px
+	overflow: hidden
+.card__nav
+	position: absolute
+	bottom: 6px
+	left: 18px
+	z-index: 2
+.card__nav-next,
+.card__nav-prev
+	cursor: pointer
+.card__nav-next
+	display: inline-block
+	margin-left: 24px
+/* END CARDs */
+
+
+/* BEGIN MAIN-COMPANY */
+.main-company
+	float: left
+	width: 845px
+	height: 320px
+	margin-left: 25px
+	+linear-gradient(to top, #f1f1f1, #fefefe)
+	border-radius: 5px
+	margin-bottom: 40px
+	overflow: hidden
+	box-shadow: 1px 1px 4px rgba(0,0,0,.25)
+.main-company__heading
+	padding: 21px 25px 18px
+	border-bottom: 1px solid #cccfd1
+	box-sizing: border-box
+.main-company__link
+	display: block
+	color: #151515
+	text-decoration: none
+.main-company__title
+	margin: 0
+	font-size: 18px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	display: inline-block
+	border-bottom: 1px solid #cccfd1
+.main-company__content
+	padding: 15px 25px
+.main-company__text
+	margin: 0 0 17px
+	line-height: 1.2
+/* END MAIN-COMPANY */
+
+
+/* BEGIN ARTICLI */
+.article
+	width: 302px
+	height: 235px
+	background-position: center center
+	background-size: cover
+	overflow: hidden
+	border-radius: 5px
+	float: left
+	position: relative
+	margin: 0 12px
+	box-shadow: 1px 1px 4px rgba(0,0,0,.25)
+	&:after
+		content: ''
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		position: absolute
+		+linear-gradient(to top, #000, rgba(0,0,0,0) 90%)
+		background-color: transparent
+		opacity: .5
+		z-index: 1
+.article_first
+	margin-left: 0
+.article_last
+	margin-right: 0
+.article__link
+	display: block
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	text-decoration: none
+	color: #fff
+	z-index: 2
+	padding: 20px 30px
+	box-sizing: border-box
+.article__title
+	margin: 0
+	font-size: 20px
+	font-family: "HelveticaNeueBold" , $helvetica
+	font-weight: normal
+	text-shadow: 1px 1px 2px rgba(0,0,0,.45)
+.article__date
+	display: inline-block
+	margin-bottom: 15px
+	font-size: 14px
+/* END ARTICLI */
+
+
+/* BEGIN MAIN-NEWS */
+.main-news
+	margin-top: 6px
+.main-news__nav
+	list-style-type: none
+	margin: 0
+	padding: 0 0 0 25px
+	font-size: 0
+.main-news__item
+	display: inline-block
+	font-size: 18px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+.main-news__link
+	color: #6a747c
+	text-decoration: none
+	&.active
+		color: #151515
+		border-bottom: 1px solid #cccfd1
+.main-news__slash
+	margin: 0 13px
+	color: #cccfd1
+.main-news__news
+	margin-top: 20px
+	+clearfix
+/* END MAIN-NEWS */
+
+
+/* BEGIN CLIENT */
+.client__item
+	text-align: center
+.client__image
+	vertical-align: middle
+	margin: 0 auto
+/* END CLIENT */
+
+
+/* BEGIN CLIENT SLIDER */
+.client-slider
+	margin-top: 105px
+	+clearfix
+.client-slider__clients,
+.client-slider__prev,
+.client-slider__next
+	display: block
+	float: left
+.client-slider__clients
+	width: 1140px
+/* END CLIENT SLIDER */
+
+
+/* BEGIN SUBSCRIPTION */
+.subscription
+	margin-top: 67px
+	background-color: #eef1f3
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 20px 25px 22px
+	+clearfix
+.subscription__heading
+	float: left
+.subscription__title
+	margin: 0
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+.subscription__description
+	margin: 6px 0 0
+	font-size: 11px
+	color: #6a747c
+.subscription__form
+	float: right
+	padding-top: 10px
+	box-sizing: border-box
+.subscription__input
+	width: 573px
+	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 5px 15px
+	font-size: 13px
+.subscription__button
+	height: 36px
+	width: 170px
+	margin-left: 20px
+	background-color: transparent
+	color: #506982
+	border: 2px solid #506982
+	border-radius: 5px
+	font-size: 14px
+	font-weight: bold
+	box-sizing: border-box
+	cursor: pointer
+	line-height: 1
+	&:hover
+		background-color: #506982
+		color: #fff
+/* END SUBSCRIPTION */
+
+
+/* BEGIN FOOTER */
+footer
+	margin-top: 50px
+	background-color: #f1f1f1
+	padding-top: 40px
+	padding-bottom: 25px
+	box-sizing: border-box
+.footer__top
+	+clearfix
+.footer__side
+	width: 50%
+	float: left
+.footer__side_right
+	text-align: right
+.footer__side_left
+	padding-left: 25px
+	box-sizing: border-box
+.footer__article
+	font-size: 13px
+	font-family: "HelveticaNeueRoman" , $helvetica
+	font-weight: normal
+	color: #143682
+	vertical-align: middle
+	text-decoration: none
+	display: inline-block
+	margin-right: 60px
+	&:hover
+		text-decoration: underline
+.footer__join
+	display: inline-block
+	vertical-align: middle
+.footer__bottom
+	width: 450px
+	padding: 25px 0 0 25px
+	box-sizing: border-box
+
+
+/* END FOOTER */
+
+/* BEGIN JOIN */
+.join
+	margin: 0
+	padding: 0
+	list-style-type: none
+.join__item
+	display: inline-block
+	margin: 0 7px
+	vertical-align: middle
+.join__link
+	line-height: 0
+	font-size: 0
+.join__title
+	font-size: 13px
+	color: #5f6971
+	margin-right: 5px
+	vertical-align: middle
+/* END JOIN */
+
+/* BEGIN COPYRIGHT*/
+.copyright
+	margin: 0
+	font-size: 12px
+	font-family: "HelveticaNeueRoman" , $helvetica
+	font-weight: normal
+	color: #5f6971
+/* END COPYRIGHT*/
+
+//ALWAYS END
+//@import "_media.sass"
