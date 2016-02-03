@@ -6,6 +6,7 @@
 @import "libs/sprite.sass"
 @import "libs/owl.carousel.sass"
 @import "libs/nice-select.scss"
+@import "libs/datetimepicker.sass"
 
 
 *::-webkit-input-placeholder
@@ -97,6 +98,9 @@ body
 	vertical-align: bottom
 	margin-left: 10px
 	color: #5f6971
+.logo__link
+	display: block
+	text-decoration: none
 /* END LOGO */
 
 /* BEGIN MAIN-MENU */
@@ -220,10 +224,14 @@ header
 	cursor: pointer
 	margin-right: 15px
 	vertical-align: middle
+	&:hover
+		opacity: .5
 .slides-nav__next
 	cursor: pointer
 	margin-left: 15px
 	vertical-align: middle
+	&:hover
+		opacity: .5
 .slides-nav__dots
 	display: inline
 	vertical-align: middle
@@ -243,6 +251,8 @@ header
 	margin: 0 10px
 	&.active
 		background-color: #ec2821
+	&:hover
+		background-color: #c93c37
 /* END OWL-DOT */
 
 
@@ -557,6 +567,10 @@ header
 	display: block
 	float: left
 	cursor: pointer
+.client-slider__prev,
+.client-slider__next
+	&:hover
+		opacity: .8
 .client-slider__clients
 	width: 1140px
 /* END CLIENT SLIDER */

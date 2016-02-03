@@ -7,8 +7,9 @@ block content
 	header
 		.container
 			.logo.header__logo
-				img(src="img/logo.png", alt="").logo__picture
-				span.logo__text Здоровье
+				a(href="/").logo__link
+					img(src="img/logo.png", alt="").logo__picture
+					span.logo__text Здоровье
 			ul.main-menu.header__main-menu
 				li.main-menu__item
 					a(href="#").main-menu__link Пансионаты
@@ -305,7 +306,8 @@ block content
 		.container
 			.footer__top
 				.footer__side.footer__side_left
-					img(src="img/logo-footer.png", alt="")
+					a(href="/")
+						img(src="img/logo-footer.png", alt="")
 				.footer__side.footer__side_right
 					a(href="#").footer__article Статьи
 					span.join__title Присоединяйтесь:
