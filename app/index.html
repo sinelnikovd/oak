@@ -64,11 +64,11 @@
             <p class="search-form__description">в пансионатах ОАК</p>
             <div class="search-form__control">
               <label for="datein" class="search-form__label">Дата заезда</label>
-              <input type="text" id="datein" class="search-form__input datetimepicker"><i class="icon icon_date search-form__icon"></i>
+              <input type="text" id="datein" class="search-form__input datetimepicker">
             </div>
             <div class="search-form__control">
               <label for="dateout" class="search-form__label">Дата отъезда</label>
-              <input type="text" id="dateout" class="search-form__input datetimepicker"><i class="icon icon_date search-form__icon"></i>
+              <input type="text" id="dateout" class="search-form__input datetimepicker">
             </div>
             <div class="search-form__control">
               <label for="people" class="search-form__label">Количество гостей</label>
@@ -184,10 +184,10 @@
         </div>
         <div class="main-news">
           <ul class="main-news__nav">
-            <li class="main-news__item"><a href="#" class="main-news__link active">Новости</a><span class="main-news__slash">/</span></li>
-            <li class="main-news__item"><a href="#" class="main-news__link">Статьи</a></li>
+            <li class="main-news__item"><a href="javascript:;" class="main-news__link main-news__link_news active">Новости</a><span class="main-news__slash">/</span></li>
+            <li class="main-news__item"><a href="javascript:;" class="main-news__link main-news__link_posts">Статьи</a></li>
           </ul>
-          <div class="main-news__news">
+          <div class="main-news__section main-news__section_news open">
             <div style="background-image: url('img/article.jpg');" class="article article_first"><a href="#" class="article__link">
                 <div class="article__description">
                   <snap class="article__date">6.12.2015</snap>
@@ -210,6 +210,24 @@
                 </div></a></div>
           </div>
         </div>
+        <div class="main-news__section main-news__section_posts">
+          <div style="background-image: url('img/article.jpg');" class="article article_first"><a href="#" class="article__link">
+              <div class="article__description">
+                <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
+              </div></a></div>
+          <div style="background-image: url('img/article1.jpg');" class="article"><a href="#" class="article__link">
+              <div class="article__description">
+                <h3 class="article__title">Пансионат "Кулон" разыграл путевки для всей семьи</h3>
+              </div></a></div>
+          <div style="background-image: url('img/article2.jpg');" class="article"><a href="#" class="article__link">
+              <div class="article__description">
+                <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
+              </div></a></div>
+          <div style="background-image: url('img/article3.jpg');" class="article article_last"><a href="#" class="article__link">
+              <div class="article__description">
+                <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
+              </div></a></div>
+        </div>
         <div class="client-slider"><i class="icon icon_c-prev client-slider__prev"></i>
           <div class="client-slider__clients">
             <div class="client">
@@ -230,7 +248,7 @@
             <p class="subscription__description">Подпишись на рассылку новостей и статей</p>
           </div>
           <form action="" class="subscription__form">
-            <input type="text" placeholder="Адрес электронной почты" class="subscription__input">
+            <input type="email" placeholder="Адрес электронной почты" required class="subscription__input">
             <button type="submit" class="subscription__button">Подписаться</button>
           </form>
         </div>

@@ -58,11 +58,9 @@ block content
 					.search-form__control
 						label(for="datein").search-form__label Дата заезда
 						input(type="text")#datein.search-form__input.datetimepicker
-						i.icon.icon_date.search-form__icon
 					.search-form__control
 						label(for="dateout").search-form__label Дата отъезда
 						input(type="text")#dateout.search-form__input.datetimepicker
-						i.icon.icon_date.search-form__icon
 					.search-form__control
 						label(for="people").search-form__label Количество гостей
 						select(name="people")#people.search-form__select
@@ -246,11 +244,12 @@ block content
 			.main-news
 				ul.main-news__nav
 					li.main-news__item
-						a(href="#").main-news__link.active Новости
+						a(href="javascript:;").main-news__link.main-news__link_news.active Новости
 						span.main-news__slash /
 					li.main-news__item
-						a(href="#").main-news__link Статьи
-				.main-news__news
+						a(href="javascript:;").main-news__link.main-news__link_posts Статьи
+
+				.main-news__section.main-news__section_news.open
 					.article.article_first(style="background-image: url('img/article.jpg');")
 						a(href="#").article__link
 							.article__description
@@ -270,6 +269,24 @@ block content
 						a(href="#").article__link
 							.article__description
 								snap.article__date 6.12.2015
+								h3.article__title Каникулы "Дикий запад" в "Зените"
+
+			.main-news__section.main-news__section_posts
+					.article.article_first(style="background-image: url('img/article.jpg');")
+						a(href="#").article__link
+							.article__description
+								h3.article__title Каникулы "Дикий запад" в "Зените"
+					.article(style="background-image: url('img/article1.jpg');")
+						a(href="#").article__link
+							.article__description
+								h3.article__title Пансионат "Кулон" разыграл путевки для всей семьи
+					.article(style="background-image: url('img/article2.jpg');")
+						a(href="#").article__link
+							.article__description
+								h3.article__title Каникулы "Дикий запад" в "Зените"
+					.article.article_last(style="background-image: url('img/article3.jpg');")
+						a(href="#").article__link
+							.article__description
 								h3.article__title Каникулы "Дикий запад" в "Зените"
 
 			.client-slider
@@ -299,7 +316,7 @@ block content
 					h2.subscription__title Узнавай о выгодных предложениях первым
 					p.subscription__description Подпишись на рассылку новостей и статей
 				form(action="").subscription__form
-					input(type="text" placeholder="Адрес электронной почты").subscription__input
+					input(type="email" placeholder="Адрес электронной почты" required).subscription__input
 					button(type="submit").subscription__button Подписаться
 
 	footer

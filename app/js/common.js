@@ -54,6 +54,21 @@ $(document).ready(function() {
 		client.trigger('next.owl.carousel');
 	})
 
+	$('.main-news__link_news').click(function () {
+		$('.main-news__link').removeClass('active');
+		$(this).addClass('active');
+		$('.main-news__section').removeClass('open');
+		$('.main-news__section_news').addClass('open');
+
+	});
+
+	$('.main-news__link_posts').click(function () {
+		$('.main-news__link').removeClass('active');
+		$(this).addClass('active');
+		$('.main-news__section').removeClass('open');
+		$('.main-news__section_posts').addClass('open');
+	});
+
 	var datein = new Date();
 	datein.setDate((new Date()).getDate()+1);
 	$.datetimepicker.setLocale('ru');
