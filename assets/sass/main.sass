@@ -5,6 +5,7 @@
 
 @import "libs/sprite.sass"
 @import "libs/owl.carousel.sass"
+@import "libs/nice-select.scss"
 
 
 *::-webkit-input-placeholder
@@ -43,6 +44,9 @@ body
 	color: #151515
 	position: relative
 
+*
+	outline: none
+
 .container
 	width: 1300px
 	margin: 0 auto
@@ -80,6 +84,8 @@ body
 	+sprite($s-tw-gray)
 	&:hover
 		+sprite($s-tw-color)
+.icon_date
+	+sprite($s-date)
 /* end icon */
 
 /* BEGIN LOGO*/
@@ -210,12 +216,34 @@ header
 .slides-nav
 	width: 100%
 	text-align: center
-.slides-nav__prev,
+.slides-nav__prev
+	cursor: pointer
+	margin-right: 15px
+	vertical-align: middle
 .slides-nav__next
 	cursor: pointer
+	margin-left: 15px
+	vertical-align: middle
 .slides-nav__dots
 	display: inline
+	vertical-align: middle
 /* END SLIDES-NAV */
+
+/* BEGIN OWL-DOT */
+.owl-dot
+	display: inline-block
+	background-color: #fff
+	border-radius: 50%
+	width: 10px
+	height: 10px
+	border: 2px solid #fff
+	box-sizing: border-box
+	cursor: pointer
+	vertical-align: middle
+	margin: 0 10px
+	&.active
+		background-color: #ec2821
+/* END OWL-DOT */
 
 
 /* BEGIN SLIDER */
@@ -224,9 +252,9 @@ header
 	+clearfix
 .slider__search
 	+clearfix
+/* END SLIDER */
 
-
-
+/* BEGIN SEARCH-FORM */
 .search-form
 	position: relative
 	z-index: 1
@@ -248,7 +276,13 @@ header
 	font-size: 11px
 	color: #6a747c
 .search-form__control
-	margin-top: 20px
+	margin-top: 17px
+	position: relative
+	+clearfix
+.search-form__icon
+	position: absolute
+	bottom: 8px
+	right: 10px
 .search-form__label
 	width: 100%
 	display: block
@@ -260,12 +294,37 @@ header
 	border: 2px solid #d9e2e9
 	border-radius: 5px
 	box-sizing: border-box
+	padding: 5px 15px
+	color: #73777a
+	font-size: 13px
 .search-form__select
+	margin-top: 10px
+	width: 80px
 	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	line-height: 32px
+	&.open,
+	&:focus,
+	&:active
+		border-color: #d9e2e9
+	&:after
+		border-color: #b1b1b1
 .search-form__button
 	width: 170px
 	height: 39px
-/* END SLIDER */
+	border: 0
+	+linear-gradient(to top, #313e4f 0%, #404f66 20%, #556477 80%, #536375 100%)
+	border-radius: 3px
+	color: #fff
+	font-weight: bold
+	text-shadow: 0 1px 2px rgba(0,0,0,.75)
+	cursor: pointer
+	&:hover
+		//+linear-gradient(to top, #536375 0%, #556477 20%, #404f66 80%, #313e4f 100%)
+		text-shadow: none
+/* END SEARCH-FORM */
 
 /* BEGIN MAIN-CONTENT */
 .main-content
@@ -407,18 +466,25 @@ header
 		background-color: transparent
 		opacity: .5
 		z-index: 1
+	&:hover
+		&:after
+			display: none
+
 .article_first
 	margin-left: 0
 .article_last
 	margin-right: 0
 .article__link
 	display: block
+	text-decoration: none
+	color: #fff
+	width: 100%
+	height: 100%
+.article__description
 	position: absolute
 	bottom: 0
 	left: 0
 	width: 100%
-	text-decoration: none
-	color: #fff
 	z-index: 2
 	padding: 20px 30px
 	box-sizing: border-box
@@ -470,6 +536,14 @@ header
 .client__image
 	vertical-align: middle
 	margin: 0 auto
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+	filter: gray
+	-webkit-filter: grayscale(100%)
+	opacity: .54
+	+transition(all 0.5s ease 0s)
+	&:hover
+		filter: none
+		opacity: 1
 /* END CLIENT */
 
 
@@ -482,6 +556,7 @@ header
 .client-slider__next
 	display: block
 	float: left
+	cursor: pointer
 .client-slider__clients
 	width: 1140px
 /* END CLIENT SLIDER */

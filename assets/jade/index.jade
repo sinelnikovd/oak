@@ -25,8 +25,8 @@ block content
 			a(href="#").header__search
 				i.icon.icon_search
 			.header__datetime
-				span.header__time 11:28
-				span.header__date 26 декабря
+				span.header__time#time 11:28
+				span.header__date#date 26 декабря
 			.header__call
 				span.header__call-label Звоните круглосуточно:
 				a(href="tel:84959918855").header__phone (495) 991-88-55
@@ -56,10 +56,12 @@ block content
 					p.search-form__description в пансионатах ОАК
 					.search-form__control
 						label(for="datein").search-form__label Дата заезда
-						input(type="text")#datein.search-form__input
+						input(type="text")#datein.search-form__input.datetimepicker
+						i.icon.icon_date.search-form__icon
 					.search-form__control
 						label(for="dateout").search-form__label Дата отъезда
-						input(type="text")#dateout.search-form__input
+						input(type="text")#dateout.search-form__input.datetimepicker
+						i.icon.icon_date.search-form__icon
 					.search-form__control
 						label(for="people").search-form__label Количество гостей
 						select(name="people")#people.search-form__select
@@ -74,7 +76,6 @@ block content
 			.container
 				i.icon.icon_s-prev.slides-nav__prev
 				.slides-nav__dots
-
 				i.icon.icon_s-next.slides-nav__next
 
 	.main-content
@@ -240,6 +241,7 @@ block content
 						p.main-company__text  Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
 
 
+
 			.main-news
 				ul.main-news__nav
 					li.main-news__item
@@ -250,20 +252,24 @@ block content
 				.main-news__news
 					.article.article_first(style="background-image: url('img/article.jpg');")
 						a(href="#").article__link
-							snap.article__date 6.12.2015
-							h3.article__title Каникулы "Дикий запад" в "Зените"
+							.article__description
+								snap.article__date 6.12.2015
+								h3.article__title Каникулы "Дикий запад" в "Зените"
 					.article(style="background-image: url('img/article1.jpg');")
 						a(href="#").article__link
-							snap.article__date 6.12.2015
-							h3.article__title Пансионат "Кулон" разыграл путевки для всей семьи
+							.article__description
+								snap.article__date 6.12.2015
+								h3.article__title Пансионат "Кулон" разыграл путевки для всей семьи
 					.article(style="background-image: url('img/article2.jpg');")
 						a(href="#").article__link
-							snap.article__date 6.12.2015
-							h3.article__title Каникулы "Дикий запад" в "Зените"
+							.article__description
+								snap.article__date 6.12.2015
+								h3.article__title Каникулы "Дикий запад" в "Зените"
 					.article.article_last(style="background-image: url('img/article3.jpg');")
 						a(href="#").article__link
-							snap.article__date 6.12.2015
-							h3.article__title Каникулы "Дикий запад" в "Зените"
+							.article__description
+								snap.article__date 6.12.2015
+								h3.article__title Каникулы "Дикий запад" в "Зените"
 
 			.client-slider
 				i.icon.icon_c-prev.client-slider__prev

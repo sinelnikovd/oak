@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="_main.min.css">
+    <link rel="stylesheet" href="libs/datetimepicker/jquery.datetimepicker.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -26,7 +27,7 @@
           <li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
           <li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
         </ul><a href="#" class="header__search"><i class="icon icon_search"></i></a>
-        <div class="header__datetime"><span class="header__time">11:28</span><span class="header__date">26 декабря</span></div>
+        <div class="header__datetime"><span id="time" class="header__time">11:28</span><span id="date" class="header__date">26 декабря</span></div>
         <div class="header__call"><span class="header__call-label">Звоните круглосуточно:</span><a href="tel:84959918855" class="header__phone">(495) 991-88-55</a></div>
       </div>
     </header>
@@ -64,11 +65,11 @@
             <p class="search-form__description">в пансионатах ОАК</p>
             <div class="search-form__control">
               <label for="datein" class="search-form__label">Дата заезда</label>
-              <input type="text" id="datein" class="search-form__input">
+              <input type="text" id="datein" class="search-form__input datetimepicker"><i class="icon icon_date search-form__icon"></i>
             </div>
             <div class="search-form__control">
               <label for="dateout" class="search-form__label">Дата отъезда</label>
-              <input type="text" id="dateout" class="search-form__input">
+              <input type="text" id="dateout" class="search-form__input datetimepicker"><i class="icon icon_date search-form__icon"></i>
             </div>
             <div class="search-form__control">
               <label for="people" class="search-form__label">Количество гостей</label>
@@ -189,17 +190,25 @@
           </ul>
           <div class="main-news__news">
             <div style="background-image: url('img/article.jpg');" class="article article_first"><a href="#" class="article__link">
-                <snap class="article__date">6.12.2015</snap>
-                <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3></a></div>
+                <div class="article__description">
+                  <snap class="article__date">6.12.2015</snap>
+                  <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
+                </div></a></div>
             <div style="background-image: url('img/article1.jpg');" class="article"><a href="#" class="article__link">
-                <snap class="article__date">6.12.2015</snap>
-                <h3 class="article__title">Пансионат "Кулон" разыграл путевки для всей семьи</h3></a></div>
+                <div class="article__description">
+                  <snap class="article__date">6.12.2015</snap>
+                  <h3 class="article__title">Пансионат "Кулон" разыграл путевки для всей семьи</h3>
+                </div></a></div>
             <div style="background-image: url('img/article2.jpg');" class="article"><a href="#" class="article__link">
-                <snap class="article__date">6.12.2015</snap>
-                <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3></a></div>
+                <div class="article__description">
+                  <snap class="article__date">6.12.2015</snap>
+                  <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
+                </div></a></div>
             <div style="background-image: url('img/article3.jpg');" class="article article_last"><a href="#" class="article__link">
-                <snap class="article__date">6.12.2015</snap>
-                <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3></a></div>
+                <div class="article__description">
+                  <snap class="article__date">6.12.2015</snap>
+                  <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
+                </div></a></div>
           </div>
         </div>
         <div class="client-slider"><i class="icon icon_c-prev client-slider__prev"></i>
@@ -258,6 +267,8 @@
       {"src" : "libs/jquery/jquery-1.11.2.min.js", "async" : false},
       {"src" : "libs/input/input.mask.js", "async" : false},
       {"src" : "libs/owl/owl.carousel.min.js", "async" : false},
+      {"src" : "libs/nice-select/jquery.nice-select.min.js", "async" : false},
+      {"src" : "libs/datetimepicker/jquery.datetimepicker.full.min.js", "async" : false},
       {"src" : "js/common.js", "async" : false}
       ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
     </script>
