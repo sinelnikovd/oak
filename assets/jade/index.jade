@@ -4,33 +4,7 @@ block title
 	title Главная страница
 
 block content
-	header
-		.container
-			.logo.header__logo
-				a(href="/").logo__link
-					img(src="img/logo.png", alt="").logo__picture
-					span.logo__text Здоровье
-			ul.main-menu.header__main-menu
-				li.main-menu__item
-					a(href="#").main-menu__link Пансионаты
-				li.main-menu__item
-					a(href="#").main-menu__link Новости и акции
-				li.main-menu__item
-					a(href="#").main-menu__link Корпоротивным клиентам
-				li.main-menu__item
-					a(href="#").main-menu__link Турагенствам
-				li.main-menu__item
-					a(href="#").main-menu__link О компании
-				li.main-menu__item
-					a(href="#").main-menu__link Контакты
-			a(href="#").header__search
-				i.icon.icon_search
-			.header__datetime
-				span.header__time#time 11:28
-				span.header__date#date 26 декабря
-			.header__call
-				span.header__call-label Звоните круглосуточно:
-				a(href="tel:84959918855").header__phone (495) 991-88-55
+
 
 	.slider
 		.slides
@@ -83,27 +57,7 @@ block content
 				i.icon.icon_book.book-in-site__icon
 				span.book-in-site__text Забронируйте номер прямо на сайте. Оставьте заявку просто и быстро.
 			.cards
-				.card
-					.card__heading
-						a(href="#").card__link
-							h2.card__title Пансионат "Зенит"
-							span.card__addres Республика Крым, Морское
-					.card__slides
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide1.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide2.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide3.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide4.jpg", alt="")
-					.card__nav
-						i.icon.icon_prev.card__nav-prev
-						i.icon.icon_next.card__nav-next
+				include ./template/card.jade
 				.card.card_margin
 					.card__heading
 						a(href="#").card__link
@@ -125,48 +79,8 @@ block content
 					.card__nav
 						i.icon.icon_prev.card__nav-prev
 						i.icon.icon_next.card__nav-next
-				.card
-					.card__heading
-						a(href="#").card__link
-							h2.card__title Пансионат "Зенит"
-							span.card__addres Республика Крым, Морское
-					.card__slides
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide1.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide2.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide3.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide4.jpg", alt="")
-					.card__nav
-						i.icon.icon_prev.card__nav-prev
-						i.icon.icon_next.card__nav-next
-				.card
-					.card__heading
-						a(href="#").card__link
-							h2.card__title Пансионат "Зенит"
-							span.card__addres Республика Крым, Морское
-					.card__slides
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide1.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide2.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide3.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide4.jpg", alt="")
-					.card__nav
-						i.icon.icon_prev.card__nav-prev
-						i.icon.icon_next.card__nav-next
+				include ./template/card.jade
+				include ./template/card.jade
 				.card.card_margin
 					.card__heading
 						a(href="#").card__link
@@ -188,48 +102,8 @@ block content
 					.card__nav
 						i.icon.icon_prev.card__nav-prev
 						i.icon.icon_next.card__nav-next
-				.card
-					.card__heading
-						a(href="#").card__link
-							h2.card__title Пансионат "Зенит"
-							span.card__addres Республика Крым, Морское
-					.card__slides
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide1.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide2.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide3.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide4.jpg", alt="")
-					.card__nav
-						i.icon.icon_prev.card__nav-prev
-						i.icon.icon_next.card__nav-next
-				.card
-					.card__heading
-						a(href="#").card__link
-							h2.card__title Пансионат "Зенит"
-							span.card__addres Республика Крым, Морское
-					.card__slides
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide1.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide2.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide3.jpg", alt="")
-						.card__slide
-							a(href="#").card__link
-								img(src="img/slide4.jpg", alt="")
-					.card__nav
-						i.icon.icon_prev.card__nav-prev
-						i.icon.icon_next.card__nav-next
+				include ./template/card.jade
+				include ./template/card.jade
 				.main-company
 					.main-company__heading
 						a(href="#").main-company__link
@@ -311,7 +185,7 @@ block content
 							img(src="img/client/rgd.png", alt="").client__image
 				i.icon.icon_c-next.client-slider__next
 
-			.subscription
+			.subscription.subscription_margin_big
 				.subscription__heading
 					h2.subscription__title Узнавай о выгодных предложениях первым
 					p.subscription__description Подпишись на рассылку новостей и статей
@@ -319,28 +193,7 @@ block content
 					input(type="email" placeholder="Адрес электронной почты" required).subscription__input
 					button(type="submit").subscription__button Подписаться
 
-	footer
-		.container
-			.footer__top
-				.footer__side.footer__side_left
-					a(href="/")
-						img(src="img/logo-footer.png", alt="")
-				.footer__side.footer__side_right
-					a(href="#").footer__article Статьи
-					span.join__title Присоединяйтесь:
-					ul.join.footer__join
-						li.join__item
-							a(href="#").join__link
-								i.icon.icon_vk
-						li.join__item
-							a(href="#").join__link
-								i.icon.icon_fb
-						li.join__item
-							a(href="#").join__link
-								i.icon.icon_tw
-			.footer__bottom
-				p.copyright &copy; 2015. Пансионаты ОАК. Все права защищены.
-				p.copyright Воспроизведение или распростронение материалов в любой форме может производиться только с письменного разрешения ОАК.
+
 
 
 

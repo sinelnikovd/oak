@@ -1,0 +1,81 @@
+extends ./template/template.jade
+
+block title
+	title Поиск номера
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					| /
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Поиск номера
+
+			h1.content__title.content__title_h1 Поиск номера
+
+			.pansions
+				h2.pansions__title Пансионат «Зенит»
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Стандартный 2-местный номер с 1 кроватью
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Полулюкс 2-местный
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Семейный 4-местный
+
+			.pansions
+				h2.pansions__title Пансионат «Полёт»
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Стандартный 2-местный номер с 1 кроватью
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Полулюкс 2-местный
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Семейный 4-местный
+
+			.pansions
+				h2.pansions__title Пансионат «Радуга»
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Стандартный 2-местный номер с 1 кроватью
+				.room-card.room-card_first
+					a(href="#").room-card__link
+						img(src="img/room-card.jpg", alt="").room-card__miniature
+						.room-card__description
+							h3.room-card__title Полулюкс 2-местный
+
+
+		include ./template/sidebar.jade
+
+	.container
+		a(href="#").book-in-site
+			i.icon.icon_book.book-in-site__icon
+			span.book-in-site__text Забронируйте номер прямо на сайте. Оставьте заявку просто и быстро.
+	.container
+		.subscription.subscription_margin_small
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

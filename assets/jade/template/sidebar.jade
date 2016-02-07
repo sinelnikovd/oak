@@ -1,0 +1,35 @@
+.sidebar
+	.action.action_text_blue
+		h4.action__title АКЦИЯ!
+		p.action__before скидки до
+		p.action__discount 20%
+		p.action__text НА ТУРЫ В ЗЕНИТ
+	.call
+		h4.call__title Звоните!
+		p.call__description Наши специалисты проконсультируют Вас с понедельника по пятницу круглосуточно
+		a(href="tel:84959918855").call__phone
+			i.icon.icon_call.call__icon
+			| 8 (495) 991-88-55
+		a(href="mailto:info@oak.ru").call__mail
+			i.icon.icon_mail.call__icon
+			| Задать вопрос
+
+	form(action="/").search-form.search-form_sidebar
+		h3.search-form__title Найдите лучшие предложения
+		p.search-form__description в пансионатах ОАК
+		.search-form__control
+			label(for="datein").search-form__label Дата заезда
+			input(type="text")#datein.search-form__input.datetimepicker
+		.search-form__control
+			label(for="dateout").search-form__label Дата отъезда
+			input(type="text")#dateout.search-form__input.datetimepicker
+		.search-form__control
+			label(for="people").search-form__label Количество гостей
+			select(name="people")#people.search-form__select
+				option(value="1") 1
+				option(value="2") 2
+				option(value="3") 3
+				option(value="4") 4
+				option(value="5") 5
+		.search-form__control
+			button(type="submit").search-form__button Найти

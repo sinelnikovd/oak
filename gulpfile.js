@@ -59,7 +59,6 @@ gulp.task('jade', function() {
 				.pipe(gulp.dest('app'));
 });
 
-
 gulp.task('sprite', function() {
 	var spriteData = 
 		gulp.src('assets/sprite/*.*')
@@ -81,10 +80,10 @@ gulp.task('watch', function() {
 	gulp.watch('assets/sass/*.sass', ['styles']);
 	gulp.watch('assets/jade/*.jade', ['jade']);
 	gulp.watch('assets/sprite/*.*', ['sprite']);
-	gulp.watch('assets/app/*.css', notifyLiveReload);
-	gulp.watch('assets/app/*.html', notifyLiveReload);
+	gulp.watch('app/*.css', notifyLiveReload);
+	gulp.watch('app/*.html', notifyLiveReload);
 });
 
-gulp.task('default', [ 'sprite' ,'styles', 'jade', 'express', 'livereload', 'watch'], function() {
+gulp.task('default', ['sprite', 'styles', 'jade', 'express', 'livereload', 'watch'], function() {
 
 });

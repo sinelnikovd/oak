@@ -1,0 +1,48 @@
+extends ./template/template.jade
+
+block title
+	title Семейный отдых в пансионате
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					| /
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Статьи
+					| /
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Семейный отдых в пансионате
+			h1.content__title.content__title_h1 Семейный отдых в пансионате
+
+			.tag
+				span.tag__title Теги: 
+				a(href="#").tag__link Семейный отдых
+
+			img(src="img/article_details.jpg", alt="").content__miniature
+			.content__text
+				p.content__paragraph Нет ничего лучше спокойного семейного отдыха с детьми или родителями. Чтобы порадовать своих близких, необязательно подгадывать даты отпуска и школьных каникул. В пансионате Зенит можно отдохнуть и в выходные!
+
+				p.content__paragraph Боитесь, что вырваться из мегаполиса помешает пятничная пробка? Пансионат предлагает семейные туры выходного дня, заселиться можно в четверг. За три дня вы забудете о тяжелом, полном забот, воздухе города.
+
+				p.content__paragraph Пансионат Зенит стоит у воды на берегу Мологского залива, словно парус, открытый ветрам водных просторов Рыбинского водохранилища. Удивительно чистый воздух, по-настоящему волшебные закаты, переменчивый нрав Рыбинского «моря», прогулки на катере, закаты над водой, рыбалка подарят массу впечатлений. За пару дней на лоне природы можно не только чудесно отдохнуть и насладиться природой и умиротворенной атмосферой, прогуляться по парку, но и сблизиться с дорогими людьми.
+
+				p.content__paragraph Доступный отдых в приятном месте – прекрасный подарок не только себе, но и любимым, членам семьи, детям и родителям. Мы ждем вас и ваших родных!
+
+			a(href="#").back.content__back
+				i.icon.icon_back.back__icon
+				span.back__text Вернуться назад
+
+			
+		include ./template/sidebar.jade
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

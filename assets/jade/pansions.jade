@@ -1,0 +1,57 @@
+extends ./template/template.jade
+
+block title
+	title Пансионаты
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					| /
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Пансионаты
+					| /
+			h1.content__title.content__title_h1 Пансионаты
+
+			.cards
+				include ./template/card-pansions.jade
+				include ./template/card-pansions.jade
+				include ./template/card-pansions.jade
+				include ./template/card-pansions.jade
+				include ./template/card-pansions.jade
+				include ./template/card-pansions.jade
+				include ./template/card-pansions.jade
+				.action-card(style="background-image: url('img/action1.jpg')")
+					a(href="#").action-card__link.action-card__link_blue
+						h4.action-card__title АКЦИЯ!
+						p.action-card__before скидки до
+						p.action-card__discount 20%
+						p.action-card__text НА ТУРЫ В ЗЕНИТ
+				.action-card(style="background-image: url('img/action2.jpg')")
+					a(href="#").action-card__link.action-card__link_white
+						h4.action-card__title АКЦИЯ!
+						p.action-card__before скидки до
+						p.action-card__discount 20%
+						p.action-card__text НА ТУРЫ В ЗЕНИТ
+
+			.content__text.content__text_pansions
+				p.content__paragraph Наша компания родилась недавно, в 2010 году, но уже набрала обороты. Неудивительно, ведь мы стоим на прочном фундаменте – базе ведомственных санаториев. «Ведомственный» значит качественный, имеющий высокий уровень обслуживания. Так было всегда, и мы продолжаем держать марку, хотя уже являемся коммерческой структурой. Мы, хоть и молоды, не только соответствуем этому высокому уровню, но и постоянно внедряем лучший зарубежный опыт в области оздоровления, активного отдыха, сервиса.
+
+				p.content__paragraph Коечный фонд нашей компании составляет 3884 места, 2063 номера. Наши филиалы расположены на площади, превышающей 100 гектаров. На объектах санаторно-курортной инфраструктуры  постоянно работают более 800 квалифицированных медицинских работников, в их распоряжении находится более 2,5 тысяч единиц специализированной медицинской техники, которая периодически обновляется.
+
+
+
+		include ./template/sidebar.jade
+
+		
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

@@ -34,6 +34,9 @@ body input:required:valid,
 body textarea:required:valid
 	color: #424242
 
+html
+	height: 100%
+
 body
 	font-size: 14px
 	min-width: 1300px
@@ -43,15 +46,24 @@ body
 	font-weight: normal
 	color: #151515
 	position: relative
+	height: 100%
 
 *
 	outline: none
+
+.page
+	box-sizing: border-box
+	min-height: 100%
+	padding-bottom: 90px
 
 .container
 	width: 1300px
 	margin: 0 auto
 	padding: 0 10px
 	box-sizing: border-box
+.container_clearfix
+	+clearfix
+
 
 .nice-select.open .list
 	width: 100%
@@ -89,6 +101,12 @@ body
 		+sprite($s-tw-color)
 .icon_date
 	+sprite($s-date)
+.icon_call
+	+sprite($s-call)
+.icon_mail
+	+sprite($s-mail)
+.icon_back
+	+sprite($s-back)
 /* end icon */
 
 /* BEGIN LOGO*/
@@ -277,6 +295,11 @@ header
 	border-radius: 5px
 	padding: 15px 20px 22px
 	box-sizing: border-box
+.search-form_sidebar
+	width: 100%
+	margin: 24px 0 0
+	box-shadow: -1px 1px 3px rgba(0,0,0,.25)
+
 .search-form__title
 	margin: 0
 	font-size: 19px
@@ -400,6 +423,8 @@ header
 	display: inline-block
 	border-bottom: 1px solid #cccfd1
 	box-sizing: border-box
+	&:hover
+		border-bottom-color: transparent
 .card__addres
 	font-size: 12px
 	color: #a9a9a9
@@ -587,12 +612,15 @@ header
 
 /* BEGIN SUBSCRIPTION */
 .subscription
-	margin-top: 67px
 	background-color: #eef1f3
 	border-radius: 5px
 	box-sizing: border-box
 	padding: 20px 25px 22px
 	+clearfix
+.subscription_margin_big
+	margin-top: 67px
+.subscription_margin_small
+	margin-top: 20px
 .subscription__heading
 	float: left
 .subscription__title
@@ -638,7 +666,7 @@ header
 
 /* BEGIN FOOTER */
 footer
-	margin-top: 50px
+	margin-top: -50px
 	background-color: #f1f1f1
 	padding-top: 40px
 	padding-bottom: 25px
@@ -702,6 +730,350 @@ footer
 	font-weight: normal
 	color: #5f6971
 /* END COPYRIGHT*/
+
+
+
+
+
+/* BEGIN CONTENT */
+.content
+	float: left
+	width: 978px
+.content__title
+	margin: 0
+.content__title_h1
+	font-size: 25px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	color: #506982
+.content__text
+	margin: 33px 0 0
+	padding: 0 40px 0 0
+.content__text_pansions
+	padding-left: 25px
+.content__paragraph
+	margin: 1em 0
+.content__back
+	margin-top: 48px
+/* END CONTENT */
+
+
+/* BEGIN BREADCRUMBS */
+.breadcrumbs
+	margin: 0
+	padding: 37px 0 52px
+	font-size: 0
+	list-style-type: none
+.breadcrumbs__item
+	display: inline-block
+	font-size: 12px
+	color: #a9a9a9
+	margin-right: 2px
+.breadcrumbs__link
+	color: #a9a9a9
+/* END BREADCRUMBS */
+
+
+/* BEGIN TAG */
+.tag
+	padding: 25px 0 10px
+.tag__title
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	color: #a9a9a9
+.tag__link
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	color: #506982
+	text-decoration: underline
+	margin-right: 2px
+	&:hover
+		text-decoration: none
+/* END TAG */
+
+/* BEGIN BACK */
+.back
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-decoration: none
+	color: #506982
+	text-transform: uppercase
+	display: inline-block
+	&:hover
+		text-decoration: underline
+.back__icon
+	margin-right: 10px
+	vertical-align: middle
+.back__text
+	vertical-align: middle
+/* END BACK */
+
+
+
+
+
+
+/* BEGIN SIDEBAR */
+.sidebar
+	float: right
+	width: 302px
+	padding-top: 38px
+/* END SIDEBAR */
+
+
+
+/* BEGIN ACTION */
+.action
+	background-color: #f1f4f5
+	border-radius: 5px
+	padding: 51px 15px 58px
+	text-align: center
+	box-shadow: -1px 1px 3px rgba(0,0,0,.25)
+	box-sizing: border-box
+.action_text_blue
+	color: #506982
+.action__title
+	margin: 0
+	font-size: 55px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	line-height: 1
+.action__before
+	margin: 10px 0 0
+	font-size: 35px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	line-height: 1
+	text-transform: uppercase
+.action__discount
+	margin: 15px 0 0
+	font-size: 90px
+	font-family: "HeliosCondBlack" , $helvetica
+	font-weight: normal
+	line-height: .85
+.action__text
+	margin: 0
+	font-size: 22px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	line-height: 1
+	text-transform: uppercase
+/* END ACTION */
+
+
+/* BEGIN CALL */
+.call
+	background-color: #f1f4f5
+	border-radius: 5px
+	padding: 15px 23px 20px 
+	box-shadow: -1px 1px 3px rgba(0,0,0,.25)
+	margin-top: 24px
+	box-sizing: border-box
+.call__title 
+	margin: 0
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+.call__description
+	margin: 6px 0 0
+	font-size: 12px
+	line-height: 1.2
+.call__icon
+	margin-right: 8px
+.call__phone
+	margin-top: 16px
+	display: block
+	text-decoration: none
+	color: #506982
+	font-size: 19px
+	font-family: "HeliosCondBold" , $helvetica
+	font-weight: normal
+.call__mail
+	margin-top: 10px
+	display: block
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+	&:hover
+		text-decoration: none
+/* END CALL */
+
+
+
+
+
+
+
+
+/* BEGIN PANSIONS */
+.pansions
+	padding: 19px 0 24px
+.pansions__title
+	margin: 0
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+/* END PANSIONS */
+
+/* BEGIN ROOM-CARD */
+.room-card
+	padding: 0 0 12px
+.room-card_first
+	padding-top: 3px
+.room-card__link
+	text-decoration: none
+	display: block
+	+clearfix
+.room-card__miniature
+	float: left
+.room-card__description
+	margin-left: 210px
+.room-card__title
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+/* END ROOM-CARD */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BEGIN CARD-PANSIONS */
+.card-pansions
+	float: left
+	width: 303px
+	border-radius: 5px
+	background-color: #fdfdfd
+	margin-bottom: 50px
+	overflow: hidden
+	box-shadow: -1px 1px 4px rgba(0,0,0,.25)
+	position: relative
+	margin-right: 22px
+.card-pansions__link
+	display: block
+	color: #151515
+	text-decoration: none
+.card-pansions__heading
+	padding: 21px 25px 18px
+	border-bottom: 1px solid #cccfd1
+	box-sizing: border-box
+	+clearfix
+.card-pansions__title
+	margin: 0
+	font-size: 18px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	display: inline-block
+	border-bottom: 1px solid #cccfd1
+	box-sizing: border-box
+	&:hover
+		border-bottom-color: transparent
+.card-pansions__addres
+	font-size: 12px
+	color: #a9a9a9
+	padding-top: 7px
+	display: block
+.card-pansions__slides
+	width: 410px
+	height: 230px
+	border-radius: 0 0 5px 5px
+	overflow: hidden
+.card-pansions__nav
+	position: absolute
+	bottom: 6px
+	left: 18px
+	z-index: 2
+.card-pansions__nav-next,
+.card-pansions__nav-prev
+	cursor: pointer
+.card-pansions__nav-next
+	display: inline-block
+	margin-left: 24px
+/* END CARD-PANSIONS */
+
+
+
+
+/* BEGIN ACTION-CARD */
+.action-card
+	float: left
+	width: 303px
+	height: 315px
+	border-radius: 5px
+	background-color: #fdfdfd
+	margin-bottom: 50px
+	overflow: hidden
+	box-shadow: -1px 1px 4px rgba(0,0,0,.25)
+	position: relative
+	margin-right: 22px
+	text-align: center
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	box-sizing: border-box
+.action-card__link
+	display: block
+	width: 100%
+	height: 100%
+	padding-top: 50px
+	text-decoration: none
+.action-card__link_blue
+	color: #506982
+.action-card__link_white
+	color: #fff
+.action-card__title
+	margin: 0
+	font-size: 55px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	line-height: 1
+.action-card__before
+	margin: 10px 0 0
+	font-size: 35px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	line-height: 1
+	text-transform: uppercase
+.action-card__discount
+	margin: 15px 0 0
+	font-size: 90px
+	font-family: "HeliosCondBlack" , $helvetica
+	font-weight: normal
+	line-height: .85
+.action-card__text
+	margin: 0
+	font-size: 22px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	line-height: 1
+	text-transform: uppercase
+/* END ACTION-CARD */
+
+
+
 
 
 

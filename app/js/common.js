@@ -39,6 +39,19 @@ $(document).ready(function() {
 		$(this).closest('.card').find('.card__slides').trigger('next.owl.carousel');
 	})
 
+	$('.card-pansions__slides').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: false,
+		items: 1
+	})
+	$('.card-pansions__nav-prev').click(function() {
+		$(this).closest('.card-pansions').find('.card-pansions__slides').trigger('prev.owl.carousel');
+	})
+	$('.card-pansions__nav-next').click(function() {
+		$(this).closest('.card-pansions').find('.card-pansions__slides').trigger('next.owl.carousel');
+	})
+
 
 
 	var client = $('.client').owlCarousel({
@@ -114,7 +127,7 @@ $(document).ready(function() {
 	});
 
 	var date = new Date(),
-			day = date.getDay(),
+			day = date.getDate(),
 			mounth = date.getMonth(),
 			oldhours = hours = date.getHours(),
 			oldminutes = minutes = date.getMinutes(),
