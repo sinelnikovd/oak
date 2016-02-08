@@ -1,0 +1,59 @@
+extends ./template/template.jade
+
+block title
+	title Статьи
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					| /
+				li.breadcrumbs__item Статьи
+					
+			h1.content__title.content__title_h1 Статьи
+
+			ul.sorting
+				li.sorting__item.active
+					a(href="#").sorting__link Все
+				li.sorting__item
+					a(href="#").sorting__link Семейный отдых
+				li.sorting__item
+					a(href="#").sorting__link Море
+				li.sorting__item
+					a(href="#").sorting__link Загар
+				li.sorting__item
+					a(href="#").sorting__link Что посмотреть
+				li.sorting__item
+					a(href="#").sorting__link Сувениры
+
+
+
+
+			.articles
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+
+			include ./template/pagination.jade
+
+
+		include ./template/sidebar.jade
+
+		
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

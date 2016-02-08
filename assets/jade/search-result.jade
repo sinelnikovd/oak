@@ -1,0 +1,45 @@
+extends ./template/template.jade
+
+block title
+	title Результаты поиска
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					|  /
+				li.breadcrumbs__item Поиск
+
+			h1.content__title.content__title_h1 Результаты поиска
+
+			form(action="/").search-result__form
+				input(type="text").search-result__input
+				button(type="submit").search-result__button
+					i.icon.icon_search
+			p.search-result__how Количество совпадений: 15
+
+			include ./template/pagination.jade
+			
+			.search-result
+				include ./template/search-result__item.jade
+				include ./template/search-result__item.jade
+				include ./template/search-result__item.jade
+				include ./template/search-result__item.jade
+				include ./template/search-result__item.jade
+				include ./template/search-result__item.jade
+
+
+			
+			include ./template/pagination.jade
+		include ./template/sidebar.jade
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

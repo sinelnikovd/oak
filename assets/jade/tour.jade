@@ -1,0 +1,64 @@
+extends ./template/template.jade
+
+block title
+	title Турагентствам
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					|  /
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Новости и акции
+					|  /
+				li.breadcrumbs__item Турагентствам
+
+			h1.content__title.content__title_h1 Турагентствам
+
+			.headslide(style="background-image: url('img/bg_tour.jpg')")
+				h2.headslide__title Семейный отдых в Крыму
+				p.headslide__description гостиницы, парковые зоны, полное питание <br>на берегу Черного моря
+
+			.content__text
+				p.content__paragraph Приглашаем к сотрудничеству туристические агентства. Уважаемые партнеры! Приглашаем Вас на дружеские встречи в наш уютный офис. На встречу Вы можете записаться  по телефону либо заполнить отправить сообщение через сайт. Мы расскажем Вам о наших экскурсионных, анимационных, банкетных программах. Вы узнаете о новых мастер-классах, мероприятиях и акциях, которые мы планируем для вас в 2016 году.
+
+				ul.list.list_margin
+					li.list__item однодневные туры
+					li.list__item туры с проживанием
+					li.list__item туры для иностранных туристов
+					li.list__item школьные туры
+					li.list__item корпоративные программы
+
+			.clients
+				h3.clients__title Наши партнеры
+				.client_content
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+					.client__item
+						img(src="img/client/skf.png", alt="").client__image
+					.client__item
+						img(src="img/client/gaz.png", alt="").client__image
+					.client__item
+						img(src="img/client/sogaz.png", alt="").client__image
+					.client__item
+						img(src="img/client/ttk.png", alt="").client__image
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+
+
+		include ./template/sidebar.jade
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

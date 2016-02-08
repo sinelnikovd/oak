@@ -1,0 +1,55 @@
+extends ./template/template.jade
+
+block title
+	title Контакты
+
+block content
+	.container.container_clearfix
+		.content.content_contact
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					|  /
+				li.breadcrumbs__item Контакты
+
+			h1.content__title.content__title_h1 Контакты
+			
+			.contact
+				h2.contact__title Адрес:
+				p.contact__text МО, Мытищинский р-н, пос. Менжинец, <br>ул. Планерная, вл. 2
+
+				h2.contact__title Телефон:
+				p.contact__text 
+						a(href="tel:84951111111").contact__link (495) 111-11-11
+
+				h2.contact__title E-mail:
+				p.contact__text 
+						a(href="mailto:oak@bazy.ru").contact__link oak@bazy.ru
+
+				h2.contact__title Как проехать:
+				p.contact__text Ж\д – Электропоездом с Савеловского вокзала до платформы «Трудовая», выход из первого вагона в сторону области. По прибытию на станцию «Трудовая» по ходу электропоезда идти направо по тоннелю до автобусной остановки дер. Хлябово.
+				p.contact__text А/м – по Дмитровскому шоссе до указателя 43 км., поворот направо на дер. Хлябово, далее 3 км. до МБО «Чайка».
+
+				form(action="/").contact-form
+					h2.contact-form__title Задать вопрос:
+					p.contact-form__description Уточните свой вопросы, и мы ответим Вам в течение 1-2 рабочих дней.
+					input(type="text" placeholder="Фамилия, имя, отчество").contact-form__input
+					input(type="text" placeholder="E-mail" required ).contact-form__input
+					input(type="text" placeholder="Телефон").contact-form__input.data-inputmask
+					textarea(rows="8" placeholder="Текст сообщения").contact-form__textarea
+					span.contact-form__mandatory Все поля обязательны для заполнения.
+					button(type="submit").contact-form__button Отправить
+
+
+		.maps#map
+
+
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

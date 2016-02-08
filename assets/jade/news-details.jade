@@ -1,0 +1,50 @@
+extends ./template/template.jade
+
+block title
+	title Умницы выиграли
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					|  /
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Новости и акции
+					|  /
+				li.breadcrumbs__item Умницы выиграли
+
+			h1.content__title.content__title_h1 Умницы выиграли
+
+			.date-type
+				span.date-type__date 
+					a(href="#").date-type__link 14.02.2016
+				span.date-type__type
+					a(href="#").date-type__link Новости
+
+			img(src="img/news_details.jpg", alt="").content__miniature
+			.content__text
+				p.content__paragraph 11 сентября 2015г. в рамках выставки &laquo;Умный ребенок&raquo; пансионат Кулон разыграл 2 путевки для всей семьи.
+
+				p.content__paragraph В рамках участия в выставке &laquo;Умный ребенок-2015&raquo; пансионат Кулон объявил конкурс &laquo;УМНИЦЫ&raquo;.<br> Любой желающий мог сфотограцироваться на фоне стенда курорта на Пермской ярморке и выложить фотографию в социальных сетях!
+
+				p.content__paragraph <strong class="blue-text">Победители</strong><br>Instagram - Бобровникова Мария - 184 лайка.<br>ВКонтакте - Алексей Коршунов - 354 лайка.
+
+
+
+			a(href="#").back.content__back
+				i.icon.icon_back.back__icon
+				span.back__text Вернуться назад
+
+			
+		include ./template/sidebar.jade
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

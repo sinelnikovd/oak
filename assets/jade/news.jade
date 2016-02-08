@@ -1,0 +1,70 @@
+extends ./template/template.jade
+
+block title
+	title Новости
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					| /
+				li.breadcrumbs__item Новости
+					
+			h1.content__title.content__title_h1 Новости и Акции
+
+			.sort-year
+				.sort-year__item
+					ul.sorting
+						li.sorting__item.active
+							a(href="#").sorting__link Все
+						li.sorting__item
+							a(href="#").sorting__link Новости
+						li.sorting__item
+							a(href="#").sorting__link Акции
+				.sort-year__item
+					ul.yaers
+						- var i = 0
+						- for (var x = 2016; x >= 2008; x--)
+							li.yaers__item(class=(i==0) ? 'active' : '')
+								- i++
+								a(href="#").yaers__link= x
+			ul.month
+				- var i = 0
+				- var list = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+				- each item in list
+					li.month__item(class=(i==1) ? 'active' : '')
+						- i++
+						a(href="#").month__link= item
+
+
+
+
+
+			.articles
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+				include ./template/article_card.jade
+
+			include ./template/pagination.jade
+
+
+		include ./template/sidebar.jade
+
+		
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться

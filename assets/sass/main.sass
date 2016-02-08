@@ -57,13 +57,15 @@ body
 	padding-bottom: 90px
 
 .container
-	width: 1300px
+	width: 1280px
 	margin: 0 auto
 	padding: 0 10px
 	box-sizing: border-box
 .container_clearfix
 	+clearfix
 
+.blue-text
+	color: #506982
 
 .nice-select.open .list
 	width: 100%
@@ -107,6 +109,8 @@ body
 	+sprite($s-mail)
 .icon_back
 	+sprite($s-back)
+.icon_close
+	+sprite($s-close)
 /* end icon */
 
 /* BEGIN LOGO*/
@@ -123,11 +127,47 @@ body
 	text-decoration: none
 /* END LOGO */
 
+
+/* BEGIN SEARCH-HEADER */
+.search-header
+	width: 55.85%
+	text-align: right
+	padding-top: 25px
+	padding-right: 10px
+	box-sizing: border-box
+	display: none
+.search-header__input
+	width: 40%
+	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 5px 15px
+	color: #73777a
+	font-size: 13px
+.search-header__button
+	margin-left: 10px
+	width: 105px
+	height: 36px
+	border: 0
+	+linear-gradient(to bottom, #133581 0%, #1d3e86 13%, #08225c 80%)
+	border-radius: 3px
+	color: #fff
+	font-weight: bold
+	font-size: 15px
+	text-shadow: 0 1px 2px rgba(0,0,0,.75)
+	cursor: pointer
+	&:hover
+		//+linear-gradient(to top, #536375 0%, #556477 20%, #404f66 80%, #313e4f 100%)
+		text-shadow: none
+/* END SEARCH-HEADER */
+
+
 /* BEGIN MAIN-MENU */
 .main-menu
 	list-style-type: none
 	margin: 0
-	padding: 0 0 0 30px
+	padding: 0 0 0 10px
 	+clearfix
 .main-menu__item
 	float: left
@@ -158,6 +198,7 @@ header
 .header__search,
 .header__datetime,
 .header__call,
+.header__search-header
 	float: left
 .header__search
 	display: block
@@ -165,6 +206,8 @@ header
 	text-decoration: none
 	&:hover
 		background-color: #eef1f3
+.header__search_close
+	padding-bottom: 22px
 .header__datetime
 	background-color: #eef1f3
 	padding: 19px 10px 22px
@@ -396,7 +439,7 @@ header
 	+clearfix
 .card
 	float: left
-	width: 410px
+	width: 32%
 	border-radius: 5px
 	background-color: #fdfdfd
 	margin-bottom: 40px
@@ -452,7 +495,7 @@ header
 /* BEGIN MAIN-COMPANY */
 .main-company
 	float: left
-	width: 845px
+	width: 66%
 	height: 320px
 	margin-left: 25px
 	+linear-gradient(to top, #f1f1f1, #fefefe)
@@ -486,7 +529,7 @@ header
 
 /* BEGIN ARTICLI */
 .article
-	width: 302px
+	width: 23.55%
 	height: 235px
 	background-position: center center
 	background-size: cover
@@ -510,11 +553,14 @@ header
 	&:hover
 		&:after
 			display: none
+	&:first-child
+		margin-left: 0
+	&:last-child
+		margin-right: 0
+.article_card
+	margin: 0 24px 40px 0
+	width: 30.8%
 
-.article_first
-	margin-left: 0
-.article_last
-	margin-right: 0
 .article__link
 	display: block
 	text-decoration: none
@@ -606,7 +652,7 @@ header
 	&:hover
 		opacity: .8
 .client-slider__clients
-	width: 1140px
+	width: 89%
 /* END CLIENT SLIDER */
 
 
@@ -696,12 +742,32 @@ footer
 	display: inline-block
 	vertical-align: middle
 .footer__bottom
-	width: 450px
-	padding: 25px 0 0 25px
+	padding-top: 25px
 	box-sizing: border-box
-
-
+	+clearfix
+.footer__side_left_bottom
+	padding-top: 10px
+	padding-left: 0
+	width: 35%
+.footer__side_right_bottom
+	width: 65%
 /* END FOOTER */
+
+/* BEGIN FOOTER-ERROR */
+.footer-error
+	float: right
+	width: 164px
+	padding: 10px
+	border-radius: 5px
+	box-sizing: border-box
+	background-color: #fff
+	border: 1px solid #c1c1c1
+	text-align: left
+.footer-error__text
+	margin: 0
+	font-size: 11px
+/* END FOOTER-ERROR */
+
 
 /* BEGIN JOIN */
 .join
@@ -738,7 +804,9 @@ footer
 /* BEGIN CONTENT */
 .content
 	float: left
-	width: 978px
+	width: 76%
+.content_contact
+	width: 50%
 .content__title
 	margin: 0
 .content__title_h1
@@ -747,6 +815,7 @@ footer
 	font-weight: normal
 	text-transform: uppercase
 	color: #506982
+
 .content__text
 	margin: 33px 0 0
 	padding: 0 40px 0 0
@@ -756,6 +825,8 @@ footer
 	margin: 1em 0
 .content__back
 	margin-top: 48px
+.content__miniature
+	max-width: 100%
 /* END CONTENT */
 
 
@@ -771,7 +842,10 @@ footer
 	color: #a9a9a9
 	margin-right: 2px
 .breadcrumbs__link
+	text-decoration: none
 	color: #a9a9a9
+	&:hover
+		text-decoration: underline
 /* END BREADCRUMBS */
 
 
@@ -794,6 +868,28 @@ footer
 	margin-right: 2px
 	&:hover
 		text-decoration: none
+/* END TAG */
+
+/* BEGIN TAG */
+.date-type
+	padding: 25px 0 10px
+.date-type__date,
+.date-type__type
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	color: #a9a9a9
+.date-type__date
+	padding-right: 10px
+.date-type__type
+	padding-left: 20px
+	border-left: 1px dotted #a9a9a9
+.date-type__link
+	color: #a9a9a9
+	text-decoration: none
+	&:hover
+		text-decoration: underline
 /* END TAG */
 
 /* BEGIN BACK */
@@ -963,7 +1059,7 @@ footer
 /* BEGIN CARD-PANSIONS */
 .card-pansions
 	float: left
-	width: 303px
+	width: 31%
 	border-radius: 5px
 	background-color: #fdfdfd
 	margin-bottom: 50px
@@ -1020,7 +1116,7 @@ footer
 /* BEGIN ACTION-CARD */
 .action-card
 	float: left
-	width: 303px
+	width: 31%
 	height: 315px
 	border-radius: 5px
 	background-color: #fdfdfd
@@ -1076,6 +1172,371 @@ footer
 
 
 
+/* BEGIN SORTING */
+.sorting
+	margin: 25px 0 0
+	padding: 0
+	list-style-type: none
+	font-size: 0
+.sorting__item
+	display: inline-block
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	padding: 0 15px
+	border-left: 1px dotted #506982
+	&.active,&:hover
+		font-family: "HeliosCondBold" , $helvetica
+		font-weight: normal
+	&:first-child
+		padding-left: 0
+		border-left: 0
+.sorting__link
+	text-decoration: none
+	color: #506982
+/* END SORTING */
+
+
+/* BEGIN SORTING */
+.yaers
+	margin: 25px 0 0
+	padding: 0
+	list-style-type: none
+	font-size: 0
+.yaers__item
+	display: inline-block
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	padding: 0 15px
+	&.active,&:hover
+		font-family: "HeliosCondBold" , $helvetica
+		font-weight: normal
+	&:last-child
+		padding-right: 0
+.yaers__link
+	text-decoration: none
+	color: #506982
+/* END SORTING */
+
+
+/* BEGIN SORTING */
+.month
+	margin: 17px 0 0
+	padding: 7px 0 3px
+	list-style-type: none
+	display: table
+	width: 97.5%
+	box-sizing: border-box
+	background-color: #eef1f3
+.month__item
+	display: table-cell
+	font-size: 12px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	text-align: center
+	vertical-align: middle
+	&.active,&:hover
+		font-family: "HeliosCondBold" , $helvetica
+		font-weight: normal
+.month__link
+	text-decoration: none
+	color: #506982
+	display: block
+/* END SORTING */
+
+
+/* BEGIN ARTICLES */
+.articles
+	margin-top: 20px
+	+clearfix
+/* END ARTICLES */
+
+
+
+/* BEGIN PAGINATION */
+.pagination
+	margin-top: 20px
+.pagination__title
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	color: #a9a9a9
+.pagination__list
+	display: inline-block
+	margin: 0
+	padding: 0
+	list-style-type: none
+	font-size: 0
+.pagination__item
+	display: inline-block
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	border-left: 1px dotted #506982
+	&:first-child
+		border-left: 0
+	&.active,&:hover
+		font-family: "HeliosCondBold" , $helvetica
+		font-weight: normal
+.pagination__link
+	display: block
+	padding: 0 20px
+	color: #506982
+	text-decoration: none
+/* END PAGINATION */
+
+
+
+
+/* BEGIN SORT_YEAR */
+.sort-year
+	width: 100%
+	display: table
+	box-sizing: border-box
+	padding-right: 25px
+.sort-year__item
+	display: table-cell
+	&:first-child
+		text-align: left
+	&:last-child
+		text-align: right
+/* END SORT_YEAR */
+
+
+
+
+
+
+/* BEGIN SEARCH-RESULT */
+.search-result__form
+	margin-top: 28px
+.search-result__input
+	width: 230px
+	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 5px 15px
+	color: #73777a
+	font-size: 13px
+.search-result__button
+	background: none
+	border: none
+	height: 36px
+	vertical-align: middle
+	cursor: pointer
+	padding: 0 7px
+	&:hover
+		background-color: #eef1f3
+.search-result__how
+	margin: 35px 0 0
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #a9a9a9
+
+.search-result
+	padding: 34px 25px 0 0
+
+.search-result__item
+	padding: 30px 0 32px
+	border-bottom: 1px solid #cccfd1
+	box-sizing: border-box
+.search-result__title
+	margin: 16px 0 0
+	font-size: 22px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+.search-result__text
+	margin: 14px 0 0
+.search-result__date
+	display: inline-block
+	font-size: 12px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #a9a9a9
+/* END SEARCH-RESULT */
+
+
+
+
+
+
+
+
+
+
+/* BEGIN HEADSLIDE */
+.headslide
+	margin: 26px 25px 0 0
+	background-size: cover
+	background-position: center center
+	padding: 20px 20px 0
+	box-sizing: border-box
+	min-height: 296px
+.headslide__title
+	margin: 0
+	color: #fff
+	font-size: 33px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	text-transform: uppercase
+	line-height: 1.2
+	text-shadow: 1px 1px 0 #010202
+.headslide__description
+	margin: 22px 0 0
+	color: #fff
+	font-size: 17px
+	font-family: "HelveticaNeueRoman" , $helvetica
+	font-weight: normal
+/* END HEADSLIDE */
+
+
+
+/* BEGIN SERVICE */
+.services
+	padding-top: 32px
+	display: table
+	width: 100%
+	padding-right: 25px
+	box-sizing: border-box
+.services__item
+	display: table-cell
+	width: 33.333333333333333333%
+.services__title
+	margin: 0
+	color: #6a747c
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+
+
+/* END SERVICE */
+
+
+/* BEGIN LIST */
+.list
+	margin: 10px 0
+	padding: 0 0 0 20px
+	list-style-image: url('img/check.png')
+.list_margin
+	margin: 25px 0
+.list__item
+	margin: 10px 0
+/* END LIST */
+
+
+
+/* BEGIN CLIENTS */
+.clients
+	margin-top: 50px
+.clients__title
+	margin: 0
+	color: #506982
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+.client_content
+	margin-top: 30px
+/* END CLIENTS */
+
+
+
+/* BEGIN MAPS */
+.maps
+	margin-top: 110px
+	float: left
+	width: 50%
+	height: 300px
+	border-radius: 5px
+	overflow: hidden
+	box-shadow: -1px 1px 3px rgba(0,0,0,.25)
+
+	position: relative
+
+	/* chrome bug fix */
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+/* END MAPS */
+
+
+
+
+
+
+
+/* BEGIN CONTACT */
+.contact
+	margin-right: 25px
+.contact__title
+	margin: 20px 0 0
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+.contact__text
+	margin: 1em 0
+.contact__link
+	text-decoration: none
+	color: #151515
+	&:hover
+		text-decoration: underline
+/* END CONTACT */
+
+
+/* BEGIN CONTACT-FORM */
+.contact-form
+	margin-top: 50px
+	width: 54%
+.contact-form__title
+	margin: 0
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+.contact-form__description
+	margin: 10px 0 0
+	color: #6a747c
+	font-size: 11px
+.contact-form__input,
+.contact-form__textarea
+	margin-top: 20px
+	width: 100%
+	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 5px 15px
+	color: #73777a
+	font-size: 13px
+.contact-form__textarea
+	height: auto
+	resize: none
+	padding-top: 10px
+.contact-form__mandatory
+	display: block
+	color: #a9a9a9
+	font-size: 11px
+.contact-form__button
+	margin-top: 30px
+	width: 170px
+	height: 39px
+	border: 0
+	+linear-gradient(to top, #313e4f 0%, #404f66 20%, #556477 80%, #536375 100%)
+	border-radius: 3px
+	color: #fff
+	font-weight: bold
+	text-shadow: 0 1px 2px rgba(0,0,0,.75)
+	cursor: pointer
+	&:hover
+		//+linear-gradient(to top, #536375 0%, #556477 20%, #404f66 80%, #313e4f 100%)
+		text-shadow: none
+/* END CONTACT-FORM */
 
 //ALWAYS END
 //@import "_media.sass"

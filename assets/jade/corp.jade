@@ -1,0 +1,91 @@
+extends ./template/template.jade
+
+block title
+	title Корпоротивным клиентам
+
+block content
+	.container.container_clearfix
+		.content
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Главная
+					|  /
+				li.breadcrumbs__item
+					a(href="/").breadcrumbs__link Новости и акции
+					|  /
+				li.breadcrumbs__item Корпоротивным клиентам
+
+			h1.content__title.content__title_h1 Корпоротивным клиентам
+
+			.headslide(style="background-image: url('img/bg_corp.jpg')")
+				h2.headslide__title Совершенно новый формат <br>деловых мероприятий!
+				p.headslide__description 7 современных конференц-залов <br>и оренда всего необходимого оборудования!
+
+			.services
+				.services__item
+					h3.services__title Деловые мероприятия
+					ul.list
+						li.list__item конференции
+						li.list__item семинары
+						li.list__item выставки
+						li.list__item круглые столы
+						li.list__item форумы и конгрессы
+						li.list__item деловые встречи
+						li.list__item бизнес-семинары
+				.services__item
+					h3.services__title Корпоративные праздники
+					ul.list
+						li.list__item тимбилдинги
+						li.list__item зимние и летние корпоративы
+						li.list__item дни отрасли
+						li.list__item юбилеи и дни рождения компаний
+						li.list__item выездные мероприятия 
+						li.list__item для лояльных клиентов
+				.services__item
+					h3.services__title Широкий спектр услуг
+					ul.list
+						li.list__item гостиницы
+						li.list__item площадки
+						li.list__item анимация
+						li.list__item трансфер и размещение
+						li.list__item презентационное
+						li.list__item оборудование
+
+			.content__text
+				p.content__paragraph Базы отдыха ОАК – это прекрасная площадка для проведения как деловых собраний, бизнес-семинаров, форумов и конференций, так и корпоративных командообразующих выездов или мероприятий для клиентов компании.
+
+				p.content__paragraph Организация бизнес-мероприятий, семинаров, выставок, форумов, деловых встреч – та область, в которой ОАК успешно работает уже несколько лет и успела накопить бесценный опыт. Мы учли все мелочи, которые могут понадобиться вам, и с удовольствием предоставим в аренду всё необходимое оборудование – от микрофонов, проекторов, экранов, световых машинок, мобильных или стационарных комплектов для проведения конференций до канцелярских принадлежностей и посуды для кофе-брейков.
+
+				p.content__paragraph Приглашаем к сотрудничеству агентства, гостей, организаторов массовых мероприятий, спонсоров, партнеров.
+
+			.clients
+				h3.clients__title Наши гости
+				.client_content
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+					.client__item
+						img(src="img/client/skf.png", alt="").client__image
+					.client__item
+						img(src="img/client/gaz.png", alt="").client__image
+					.client__item
+						img(src="img/client/sogaz.png", alt="").client__image
+					.client__item
+						img(src="img/client/ttk.png", alt="").client__image
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+					.client__item
+						img(src="img/client/rgd.png", alt="").client__image
+
+
+		include ./template/sidebar.jade
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться
