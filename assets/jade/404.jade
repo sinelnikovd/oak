@@ -1,0 +1,56 @@
+extends ./template/template.jade
+
+block title
+	title Главная страница
+
+block content
+	.error404
+		.container
+			.error404__content
+				.error404__side.error404__side_left
+					h1.error404__title 404
+					p.error404__description Извините, страницы с таким адресом не найдено. Проверьте URL-адрес и повторите попытку.
+				.error404__side.error404__side_right
+					form(action="/").error404__search
+						label(for="search_404").error404__label
+							i.icon.icon_check.error404__check
+							| Воспользуйтесь поиском:
+						input(type="text").search-result__input.search-result__input_404
+						button(type="submit").search-result__button
+							i.icon.icon_search
+					h2.error404__subtitle Вы можете:
+					ul.list
+						li.list__item.list__item_404 Вернуться на 
+							a(href="#").error404__link предыдущую страницу
+						li.list__item.list__item_404 Перейти на 
+							a(href="#").error404__link главную страницу
+						li.list__item.list__item_404
+							a(href="#").error404__link Сообщить нам
+							|  о возникшей проблеме
+
+
+	.container
+		.subscription.subscription_margin_big
+			.subscription__heading
+				h2.subscription__title Узнавай о выгодных предложениях первым
+				p.subscription__description Подпишись на рассылку новостей и статей
+			form(action="").subscription__form
+				input(type="email" placeholder="Адрес электронной почты" required).subscription__input
+				button(type="submit").subscription__button Подписаться
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

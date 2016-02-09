@@ -198,6 +198,7 @@ $(document).ready(function() {
 			$(this).addClass('header__search_close');
 			$(this).find('.icon_search').removeClass('icon_search').addClass('icon_close');
 		}
+		return false;
 	});
 
 });
