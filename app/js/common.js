@@ -201,6 +201,30 @@ $(document).ready(function() {
 		return false;
 	});
 
+
+	$('.nav__item').click(function () {
+		$('.nav__item.active').removeClass("active");
+		$(this).addClass("active");
+		$('.tab.active').removeClass("active");
+		$('.tab').eq($(this).index()).addClass("active");
+	});
+
+	$('.cam').click(function () {
+		$('.nav__item.active').removeClass("active");
+		$('.tab.active').removeClass("active");
+		$('.tab_video').addClass('active');
+	});
+
+
+
+	$('._book-popup-link').magnificPopup({
+		items: {
+			src: '.book-popup',
+			type: 'inline'
+		},
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close icon icon_close"></button>'
+	});
+
 });
 
 /*	//SVG Fallback

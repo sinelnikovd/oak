@@ -7,6 +7,7 @@
 @import "libs/owl.carousel.sass"
 @import "libs/nice-select.scss"
 @import "libs/datetimepicker.sass"
+@import "libs/magnific-popup.sass"
 
 
 *::-webkit-input-placeholder
@@ -162,7 +163,6 @@ body
 
 /* BEGIN SEARCH-HEADER */
 .search-header
-	width: 55.85%
 	text-align: right
 	padding-top: 25px
 	padding-right: 10px
@@ -223,26 +223,36 @@ header
 	position: relative
 	z-index: 1
 	+clearfix
-.header__logo
-	float: left
-	padding: 20px 0
+.header__logo,
 .header__main-menu,
 .header__search,
 .header__datetime,
 .header__call,
 .header__search-header
 	float: left
+.header__logo
+	width: (260/$width)*100%
+	box-sizing: border-box
+	padding: 20px 0
+.header__main-menu,.header__search-header
+	width: (708/$width)*100%
+	box-sizing: border-box
 .header__search
+	width: (50/$width)*100%
+	box-sizing: border-box
 	display: block
-	padding: 40px 21px 18px
+	padding: 40px 0 18px
+	text-align: center
 	text-decoration: none
 	&:hover
 		background-color: #eef1f3
 .header__search_close
 	padding-bottom: 22px
 .header__datetime
+	width: (78/$width)*100%
+	box-sizing: border-box
 	background-color: #eef1f3
-	padding: 19px 10px 22px
+	padding: 19px 0 22px
 	text-align: center
 	margin-left: 10px
 .header__time
@@ -254,6 +264,8 @@ header
 	font-size: 11px
 	margin-top: 4px
 .header__call
+	width: (154/$width)*100%
+	box-sizing: border-box
 	padding: 20px 0 0 17px
 	text-align: right
 .header__call-label
@@ -2009,6 +2021,116 @@ footer
 	font-family: "HeliosCondRegular" , $helvetica
 	font-weight: normal
 /* END VIDEO-CAM */
+
+
+
+
+/* BEGIN BOOK-POPUP */
+.book-popup
+	position: relative
+	max-width: 488px
+	margin: 0 auto
+	+linear-gradient(to top, #f1f1f1 0%, #fefefe 100%)
+	border-radius: 5px
+	box-shadow: 0 1px 3px rgba(0,0,0,.2)
+	padding: 15px 20px 20px
+	box-sizing: border-box
+.book-popup__title
+	margin: 0
+	color: #506982
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+.book-popup__description
+	margin: 6px 0 0
+	color: #6a747c
+	font-size: 11px
+.book-popup__mandatory
+	margin: 25px 0 0
+	color: #6a747c
+	font-size: 13px
+.form-book__sides
+	+clearfix
+.form-book__side
+	float: left
+	width: 50%
+	margin-top: 12px
+	box-sizing: border-box
+.form-book__side_left
+	padding-right: 10px
+.form-book__side_right
+	padding-left: 10px
+.form-book__side_pepole
+	width: 33%
+.form-book__label
+	font-size: 11px
+.form-book__select
+	margin-top: 10px
+	width: 80px
+	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	line-height: 32px
+	&.open,
+	&:focus,
+	&:active
+		border-color: #d9e2e9
+	&:after
+		border-color: #b1b1b1
+.form-book__input
+	margin-top: 10px
+	width: 100%
+	height: 36px
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 5px 15px
+	color: #73777a
+	font-size: 13px
+.form-book__input_date
+	background-image: url('img/date.png')
+	background-position: 95% center
+	background-repeat: no-repeat
+	cursor: pointer
+.form-book__textarea
+	margin-top: 10px
+	width: 100%
+	border: 2px solid #d9e2e9
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 10px 15px
+	color: #73777a
+	font-size: 13px
+	resize: none
+.form-book__line
+	margin-top: 20px
+
+.form-book__label_transfer
+	vertical-align: middle
+	color: #6a747c
+	font-size: 13px
+
+.form-book__checkbox
+	display: none
+	&+.form-book__label
+		&:before
+			content: ''
+			display: inline-block
+			margin-right: 5px
+			vertical-align: middle
+			+sprite($s-checkbox-no-active)
+	&::disabled
+		&+.form-book__label
+			&:before
+				+sprite($s-checkbox-no-active)
+	&:checked
+		&+.form-book__label
+			&:before
+				+sprite($s-checkbox-active)
+
+
+/* END BOOK-POPUP */
 
 
 //ALWAYS END
