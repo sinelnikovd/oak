@@ -56,6 +56,9 @@ body
 *
 	outline: none
 
+.hidden
+	display: none
+
 .page
 	box-sizing: border-box
 	min-height: 100%
@@ -124,26 +127,56 @@ body
 	+sprite($s-marker)
 .icon_cold
 	+sprite($s-cold)
+	&:hover
+		+sprite($s-cold-color)
 .icon_dinner
 	+sprite($s-dinner)
+	&:hover
+		+sprite($s-dinner-color)
 .icon_cocktail
 	+sprite($s-cocktail)
+	&:hover
+		+sprite($s-cocktail-color)
 .icon_shower
 	+sprite($s-shower)
+	&:hover
+		+sprite($s-shower-color)
 .icon_wi-fi
 	+sprite($s-wi-fi)
+	&:hover
+		+sprite($s-wi-fi-color)
 .icon_bed
 	+sprite($s-bed)
+	&:hover
+		+sprite($s-bed-color)
 .icon_child
 	+sprite($s-child)
+	&:hover
+		+sprite($s-child-color)
 .icon_animal
 	+sprite($s-animal)
+	&:hover
+		+sprite($s-animal-color)
 .icon_tv
 	+sprite($s-tv)
+	&:hover
+		+sprite($s-tv-color)
 .icon_24
 	+sprite($s-24)
+	&:hover
+		+sprite($s-24-color)
 .icon_cam
 	+sprite($s-cam)
+.icon_close-popup
+	+sprite($s-close-popup)
+.icon_r-prev
+	+sprite($s-r-prev-hover)
+.icon_r-next
+	+sprite($s-r-next-hover)
+.icon_up
+	+sprite($s-up)
+.icon_down
+	+sprite($s-down)
 /* end icon */
 
 /* BEGIN LOGO*/
@@ -203,6 +236,11 @@ body
 	+clearfix
 .main-menu__item
 	float: left
+.main-menu__item_sub-menu
+	position: relative
+	&:hover
+		.sub-menu
+			display: block
 .main-menu__link
 	font-size: 13px
 	font-family: "HeliosCondBold" , $helvetica
@@ -221,7 +259,7 @@ header
 	background-color: #fff
 	box-shadow: 0 0 5px #010202
 	position: relative
-	z-index: 1
+	z-index: 3
 	+clearfix
 .header__logo,
 .header__main-menu,
@@ -282,8 +320,69 @@ header
 	line-height: 1
 	margin-top: 5px
 	text-decoration: none
-
 /* END HEADER */
+
+/* BEGIN SUB-MENU */
+.sub-menu
+	position: absolute
+	top: 100%
+	left: -10px
+	min-width: 375px
+	background-color: #fff
+	border-radius: 0 0 5px 5px
+	overflow: hidden
+	margin: 0
+	padding: 0
+	list-style-type: none
+	box-sizing: border-box
+	box-shadow: 0 1px 4px rgba(0,0,0,.25)
+	+linear-gradient(to top, #f1f1f1, #fefefe)
+	display: none
+	&:after
+		content: ''
+		position: absolute
+		top: -10px
+		left: -10%
+		width: 120%
+		z-index: 5
+		height: 10px
+		box-shadow: 0 0 5px #010202
+.sub-menu__item
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 1px
+		width: 80%
+		margin: 0 10%
+		background-color: #e1e1e1
+	&:last-child
+		&:after
+			display: none
+.sub-menu__link
+	display: block
+	width: 100%
+	padding: 15px 40px 25px
+	box-sizing: border-box
+	color: #73777a
+	font-size: 15px
+	font-family: "HelveticaNeueBold" , $helvetica
+	font-weight: normal
+	text-decoration: none
+	&:hover
+		background-color: #eef1f3
+/* END SUB-MENU */
+
+
+
+
+
+
+
+
+
 
 
 /* BEGIN SLIDES */
@@ -1809,14 +1908,15 @@ footer
 	+clearfix
 .desc-icon__item
 	float: left
-	margin-right: 20px
+	margin-right: 7px
 	position: relative
+	cursor: pointer
 	&:hover
 		.desc-icon__tooltip
 			display: block
 .desc-icon__tooltip
 	position: absolute
-	bottom: 35px
+	bottom: 40px
 	left: -5px
 	display: none
 	background-color: #eef1f3
@@ -1828,7 +1928,7 @@ footer
 		content: ''
 		position: absolute
 		top: 100%
-		left: 10px
+		left: 15px
 		border-left: 5px solid transparent
 		border-right: 5px solid transparent
 		border-top: 5px solid #eef1f3
@@ -1895,6 +1995,8 @@ footer
 	background-size: cover
 	box-sizing: border-box
 	+clearfix
+.book-bottom_width_100
+	width: 100%
 .book-bottom__side
 	float: left
 .book-bottom__side_left
@@ -1968,6 +2070,8 @@ footer
 	font-size: 14px
 	font-family: "HeliosCondRegular" , $helvetica
 	font-weight: normal
+	&:hover
+		text-decoration: none
 /* END ROOM */
 
 
@@ -2006,7 +2110,6 @@ footer
 
 /* BEGIN VIDEO-CAM */
 .video-cam
-	width: (720/938)*100%
 	padding-top: 27px
 	box-sizing: border-box
 .video-cam__title
@@ -2020,6 +2123,15 @@ footer
 	font-size: 14px
 	font-family: "HeliosCondRegular" , $helvetica
 	font-weight: normal
+.video-cam__video
+	width: (720/938)*100%
+	height: 450px
+	margin-top: 25px
+
+.video-js .vjs-big-play-button
+	top: 50%
+	left: 50%
+	+transform(translate(-50%))
 /* END VIDEO-CAM */
 
 
@@ -2064,6 +2176,8 @@ footer
 	width: 33%
 .form-book__label
 	font-size: 11px
+.form-book__label_phone
+	display: block
 .form-book__select
 	margin-top: 10px
 	width: 80px
@@ -2093,6 +2207,8 @@ footer
 	background-position: 95% center
 	background-repeat: no-repeat
 	cursor: pointer
+.form-book__input_phone
+	width: (297/488)*100%
 .form-book__textarea
 	margin-top: 10px
 	width: 100%
@@ -2114,23 +2230,372 @@ footer
 .form-book__checkbox
 	display: none
 	&+.form-book__label
+		cursor: pointer
 		&:before
+			position: relative
 			content: ''
 			display: inline-block
 			margin-right: 5px
 			vertical-align: middle
+			cursor: pointer
+			top: -2px
 			+sprite($s-checkbox-no-active)
-	&::disabled
-		&+.form-book__label
-			&:before
-				+sprite($s-checkbox-no-active)
 	&:checked
 		&+.form-book__label
 			&:before
 				+sprite($s-checkbox-active)
-
+.form-book__button
+	width: 170px
+	height: 39px
+	border: 0
+	+linear-gradient(to top, #313e4f 0%, #404f66 20%, #556477 80%, #536375 100%)
+	border-radius: 3px
+	color: #fff
+	font-weight: bold
+	text-shadow: 0 1px 2px rgba(0,0,0,.75)
+	cursor: pointer
+	&:hover
+		//+linear-gradient(to top, #536375 0%, #556477 20%, #404f66 80%, #313e4f 100%)
+		text-shadow: none
 
 /* END BOOK-POPUP */
+
+
+
+
+
+
+
+
+/* BEGIN ROOM-POPUP */
+.room-popup
+	position: relative
+	max-width: 774px
+	margin: 0 auto
+	+linear-gradient(to top, #f1f1f1 0%, #fefefe 100%)
+	border-radius: 5px
+	box-shadow: 0 1px 3px rgba(0,0,0,.2)
+	padding: 17px 20px 20px
+	box-sizing: border-box
+.room-popup__title
+	margin: 0
+	color: #506982
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+.room-popup__slider
+	margin-top: 10px
+	height: 280px
+.room-popup__count-people
+	margin: 20px 0 0
+	color: #506982
+	font-size: 13px
+.room-popup__text
+	width: (640/774)*100%
+	margin: 20px 0 0
+.room-popup__paragraph
+	margin: 18px 0
+	line-height: 1.25
+.room-popup__subtitle
+	margin: 42px 0 0
+	color: #506982
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+.room-popup__subtitle_center
+	text-align: center
+.room-popup__elaboration
+	margin: 6px 0 0
+	color: #a9a9a9
+	font-size: 14px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+.room-popup__table
+	width: (638/734)*100%
+	margin-top: 20px
+	background-color: #fff
+	border: 2px solid #d9e2e9
+	border-radius: 3px
+	border-collapse: separate
+	overflow: hidden
+.room-popup__td
+	border: 1px solid #d9e2e9
+	text-align: right
+	font-size: 13px
+	padding: 18px 10px
+	box-sizing: border-box
+	line-height: 1
+.room-popup__td_left
+	text-align: left
+	padding-left: 15px
+.room-popup__thead
+	color: #73777a
+	.room-popup__td
+		vertical-align: bottom
+		padding-bottom: 9px
+.room-popup__similar-room
+	margin-top: 20px
+/* END ROOM-POPUP */
+
+
+/* BEGIN SIMILAR-ROOM */
+.similar-room
+	width: 100%
+	+clearfix
+.similar-room__prev
+	padding-top: 10px
+	float: left
+	width: 10%
+	cursor: pointer
+.similar-room__next
+	padding-top: 10px
+	float: left
+	width: 10%
+	cursor: pointer
+.similar-room__items
+	float: left
+	width: 80%
+.similar-room__item
+	text-align: center
+.similar-room__pickture
+	margin: 0 auto
+.similar-room__text
+	font-size: 13px
+.similar-room__link
+	display: block
+	text-decoration: none
+	color: #506982
+	&:hover
+		text-decoration: underline
+/* END SIMILAR-ROOM */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BEGIN PANSION-SLIDER*/
+.pansion-slider
+	margin-top: 25px
+	+clearfix
+.pansion-slider__carousel
+	overflow: hidden
+	position: relative
+
+.pansion-slider__stage
+	float: left
+	width: (727/938)*100%
+	position: relative
+	&:hover
+		.pansion-slider__next_stage,
+		.pansion-slider__prev_stage
+			display: block
+			&.inactive
+				display: none
+.pansion-slider__carousel_stage
+	height: 420px
+
+.pansion-slider__navigation
+	float: left
+	margin-left: (25/938)*100%
+	width: (186/938)*100%
+.pansion-slider__carousel_navigation
+	height: 360px
+
+.pansion-slider__list
+	margin: 0
+	padding: 0
+	list-style-type: none
+	position: relative
+	width: 100%
+.pansion-slider__image
+	max-width: 100%
+	margin: 0
+	display: block
+.pansion-slider__item_nav
+	padding: 7px 0
+	&.active
+		.pansion-slider__image
+			border: 2px solid #506982
+			box-sizing: border-box
+
+
+.pansion-slider__next_stage,
+.pansion-slider__prev_stage
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 50%
+	display: block
+	background-color: transparent
+	text-decoration: none
+	display: none
+	font-size: 20px
+	color: #fff
+
+.pansion-slider__prev_stage
+	left: 0
+
+.pansion-slider__next_stage
+	right: 0
+
+.pansion-slider__next_navigation,
+.pansion-slider__prev_navigation
+	text-align: center
+	display: block
+	text-decoration: none
+.pansion-slider__next_navigation
+	height: 33px
+.pansion-slider__prev_navigation
+	height: 33px
+
+.pansion-slider__prev-icon,
+.pansion-slider__next-icon
+	position: absolute
+	top: 50%
+	padding: 5px 10px 7px
+	background-color: rgba(80,105,130,.5)
+	&:hover
+		background-color: rgba(80,105,130,.8)
+.pansion-slider__prev-icon
+	left: 20px
+.pansion-slider__next-icon
+	right: 20px
+/* END PANSION-SLIDER*/
+
+
+
+
+
+
+
+/* BEGIN PANSION-SLIDER*/
+.room-slider
+	margin-top: 10px
+	+clearfix
+.room-slider__carousel
+	overflow: hidden
+	position: relative
+
+.room-slider__stage
+	float: left
+	width: (727/938)*100%
+	position: relative
+	&:hover
+		.room-slider__next_stage,
+		.room-slider__prev_stage
+			display: block
+			&.inactive
+				display: none
+.room-slider__carousel_stage
+	height: 280px
+
+.room-slider__navigation
+	float: left
+	margin-left: (25/938)*100%
+	width: (186/938)*100%
+.room-slider__carousel_navigation
+	height: 220px
+
+.room-slider__list
+	margin: 0
+	padding: 0
+	list-style-type: none
+	position: relative
+	width: 100%
+.room-slider__image
+	max-width: 100%
+	margin: 0
+	display: block
+.room-slider__item_nav
+	padding: 7px 0
+	&.active
+		.room-slider__image
+			border: 2px solid #506982
+			box-sizing: border-box
+
+
+.room-slider__next_stage,
+.room-slider__prev_stage
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 50%
+	display: block
+	background-color: transparent
+	text-decoration: none
+	display: none
+	font-size: 20px
+	color: #fff
+
+.room-slider__prev_stage
+	left: 0
+
+.room-slider__next_stage
+	right: 0
+
+.room-slider__next_navigation,
+.room-slider__prev_navigation
+	text-align: center
+	display: block
+	text-decoration: none
+.room-slider__next_navigation
+	height: 33px
+.room-slider__prev_navigation
+	height: 33px
+
+.room-slider__prev-icon,
+.room-slider__next-icon
+	position: absolute
+	top: 50%
+	padding: 5px 10px 7px
+	background-color: rgba(80,105,130,.5)
+	&:hover
+		background-color: rgba(80,105,130,.8)
+.room-slider__prev-icon
+	left: 20px
+.room-slider__next-icon
+	right: 20px
+/* END PANSION-SLIDER*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mfp-bg
+	background-color: #41464a
+
+.mfp-close-btn-in .mfp-close
+	position: absolute
+	top: 12px
+	right: 12px
+button.mfp-close
+	+sprite($s-close-popup)
 
 
 //ALWAYS END

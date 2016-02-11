@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Семейный отдых в пансионате</title>
+    <title>Пансионат «ЗЕНИТ» </title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link href="http://vjs.zencdn.net/5.6.0/video-js.css" rel="stylesheet">
     <link rel="stylesheet" href="_main.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,7 +21,16 @@
         <div class="container">
           <div class="logo header__logo"><a href="/" class="logo__link"><img src="img/logo.png" alt="" class="logo__picture"><span class="logo__text">Здоровье</span></a></div>
           <ul class="main-menu header__main-menu">
-            <li class="main-menu__item"><a href="#" class="main-menu__link">Пансионаты</a></li>
+            <li class="main-menu__item main-menu__item_sub-menu"><a href="#" class="main-menu__link">Пансионаты</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Зенит</a></li>
+                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Полет</a></li>
+                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Кулон</a></li>
+                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Радуга</a></li>
+                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Чайка, Московская область</a></li>
+                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Чайка, Иркутская область</a></li>
+              </ul>
+            </li>
             <li class="main-menu__item"><a href="#" class="main-menu__link">Новости и акции</a></li>
             <li class="main-menu__item"><a href="#" class="main-menu__link">Корпоротивным клиентам</a></li>
             <li class="main-menu__item"><a href="#" class="main-menu__link">Турагенствам</a></li>
@@ -83,7 +93,32 @@
           </div>
         </div>
         <div class="pansion-details">
-          <div class="slider"></div>
+          <div class="pansion-slider">
+            <div class="pansion-slider__stage">
+              <div class="pansion-slider__carousel pansion-slider__carousel_stage">
+                <ul class="pansion-slider__list">
+                  <li class="pansion-slider__item"><img src="img/pansions.jpg" alt="" class="pansion-slider__image"></li>
+                  <li class="pansion-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image"></li>
+                  <li class="pansion-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image"></li>
+                  <li class="pansion-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image"></li>
+                  <li class="pansion-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image"></li>
+                  <li class="pansion-slider__item"><img src="img/pansions.jpg" alt="" class="pansion-slider__image"></li>
+                </ul>
+              </div><a href="javascript:;" class="pansion-slider__prev pansion-slider__prev_stage"><span class="pansion-slider__prev-icon">&lsaquo;</span></a><a href="javascript:;" class="pansion-slider__next pansion-slider__next_stage"><span class="pansion-slider__next-icon">&rsaquo;</span></a>
+            </div>
+            <div class="pansion-slider__navigation"><a href="javascript:;" class="pansion-slider__prev pansion-slider__prev_navigation"><i class="icon icon_up"></i></a>
+              <div class="pansion-slider__carousel pansion-slider__carousel_navigation">
+                <ul class="pansion-slider__list">
+                  <li class="pansion-slider__item pansion-slider__item_nav"><img src="img/pansions.jpg" alt="" class="pansion-slider__image pansion-slider__image_nav"></li>
+                  <li class="pansion-slider__item pansion-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image pansion-slider__image_nav"></li>
+                  <li class="pansion-slider__item pansion-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image pansion-slider__image_nav"></li>
+                  <li class="pansion-slider__item pansion-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image pansion-slider__image_nav"></li>
+                  <li class="pansion-slider__item pansion-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="pansion-slider__image pansion-slider__image_nav"></li>
+                  <li class="pansion-slider__item pansion-slider__item_nav"><img src="img/pansions.jpg" alt="" class="pansion-slider__image pansion-slider__image_nav"></li>
+                </ul>
+              </div><a href="javascript:;" class="pansion-slider__next pansion-slider__next_navigation"><i class="icon icon_down"></i></a>
+            </div>
+          </div>
           <div class="nav-cam">
             <div class="nav-cam__side nav-cam__side_left">
               <ul class="nav">
@@ -148,46 +183,46 @@
                   <div class="room">
                     <p class="room__type">Стандарт</p>
                     <ul class="room__links">
-                      <li class="room__item"><a href="javascript:;" class="room__link">Стандартный 2-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Стандартный 3-местный номер с 2 кроватями</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Стандартный 3-местный номер с 3 кроватями</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Стандартный 4-местный номер с 4 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Стандартный 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Стандартный 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Стандартный 3-местный номер с 3 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Стандартный 4-местный номер с 4 кроватями</a></li>
                     </ul>
                   </div>
                   <div class="room">
                     <p class="room__type">Эконом</p>
                     <ul class="room__links">
-                      <li class="room__item"><a href="javascript:;" class="room__link">Эконом 2-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Эконом 3-местный номер с 2 кроватями</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Эконом 3-местный номер с 3 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Эконом 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Эконом 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Эконом 3-местный номер с 3 кроватями</a></li>
                     </ul>
                   </div>
                   <div class="room">
                     <p class="room__type">Семейный</p>
                     <ul class="room__links">
-                      <li class="room__item"><a href="javascript:;" class="room__link">Семейный 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Семейный 2-местный номер с 1 кроватью</a></li>
                     </ul>
                   </div>
                   <div class="room">
                     <p class="room__type">Полулюкс</p>
                     <ul class="room__links">
-                      <li class="room__item"><a href="javascript:;" class="room__link">Полулюкс 2-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Полулюкс 3-местный номер с 2 кроватями</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Полулюкс 2-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Полулюкс 3-местный номер с 2 кроватями</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Полулюкс 2-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Полулюкс 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Полулюкс 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Полулюкс 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Полулюкс 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Полулюкс 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Полулюкс 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Полулюкс 3-местный номер с 2 кроватями</a></li>
                     </ul>
                   </div>
                   <div class="room">
                     <p class="room__type">Люкс</p>
                     <ul class="room__links">
-                      <li class="room__item"><a href="javascript:;" class="room__link">Люкс 1-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Люкс 3-местный номер с 2 кроватями</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Люкс 2-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Люкс 3-местный номер с 2 кроватями</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Люкс 2-местный номер с 1 кроватью</a></li>
-                      <li class="room__item"><a href="javascript:;" class="room__link">Люкс 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Люкс 1-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Люкс 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Люкс 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Люкс 3-местный номер с 2 кроватями</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Люкс 2-местный номер с 1 кроватью</a></li>
+                      <li class="room__item"><a href="javascript:;" class="room__link _room-popup-link">Люкс 3-местный номер с 2 кроватями</a></li>
                     </ul>
                   </div>
                 </div>
@@ -287,6 +322,11 @@
               <div class="video-cam">
                 <h1 class="video-cam__title">Веб-камера в Морском</h1>
                 <p class="video-cam__description">Веб-камера установлена на пляже</p>
+                <video id="my-video" controls preload="auto" poster="img/poster.jpg" data-setup="{}" class="video-js video-cam__video">
+                  <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                  <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                  <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                </video>
               </div>
             </div>
           </div>
@@ -418,7 +458,7 @@
             <input id="email" type="text" class="form-book__input">
           </div>
           <div class="form-book__line">
-            <label for="phone" class="form-book__label">Телефон*</label>
+            <label for="phone" class="form-book__label form-book__label_phone">Телефон*</label>
             <input id="phone" type="text" class="data-inputmask form-book__input form-book__input_phone">
           </div>
           <div class="form-book__line">
@@ -429,6 +469,107 @@
             <button type="submit" class="form-book__button">Отправить</button>
           </div>
         </form>
+      </div>
+      <div class="room-popup">
+        <h2 class="room-popup__title">Стандартный 2-местный номер с 1 кроватью (пансионат «Зенит»)</h2>
+        <div class="room-slider">
+          <div class="room-slider__stage">
+            <div class="room-slider__carousel room-slider__carousel_stage">
+              <ul class="room-slider__list">
+                <li class="room-slider__item"><img src="img/pansions.jpg" alt="" class="room-slider__image"></li>
+                <li class="room-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image"></li>
+                <li class="room-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image"></li>
+                <li class="room-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image"></li>
+                <li class="room-slider__item"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image"></li>
+                <li class="room-slider__item"><img src="img/pansions.jpg" alt="" class="room-slider__image"></li>
+              </ul>
+            </div><a href="javascript:;" class="room-slider__prev room-slider__prev_stage"><span class="room-slider__prev-icon">&lsaquo;</span></a><a href="javascript:;" class="room-slider__next room-slider__next_stage"><span class="room-slider__next-icon">&rsaquo;</span></a>
+          </div>
+          <div class="room-slider__navigation"><a href="javascript:;" class="room-slider__prev room-slider__prev_navigation"><i class="icon icon_up"></i></a>
+            <div class="room-slider__carousel room-slider__carousel_navigation">
+              <ul class="room-slider__list">
+                <li class="room-slider__item room-slider__item_nav"><img src="img/pansions.jpg" alt="" class="room-slider__image room-slider__image_nav"></li>
+                <li class="room-slider__item room-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image room-slider__image_nav"></li>
+                <li class="room-slider__item room-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image room-slider__image_nav"></li>
+                <li class="room-slider__item room-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image room-slider__image_nav"></li>
+                <li class="room-slider__item room-slider__item_nav"><img src="http://placekitten.com/g/727/420" alt="" class="room-slider__image room-slider__image_nav"></li>
+                <li class="room-slider__item room-slider__item_nav"><img src="img/pansions.jpg" alt="" class="room-slider__image room-slider__image_nav"></li>
+              </ul>
+            </div><a href="javascript:;" class="room-slider__next room-slider__next_navigation"><i class="icon icon_down"></i></a>
+          </div>
+        </div>
+        <p class="room-popup__count-people">Количество гостей: 2</p>
+        <div class="room-popup__text">
+          <p class="room-popup__paragraph">Номер с кондиционером, телевизором с плоским экраном и собственной ванной комнатой. В распоряжении гостей мини-бар, тапочки и бесплатная вода по прибытии. Двуспальная кровать предоставляется по запросу.</p>
+          <p class="room-popup__paragraph">Бесплатный Wi-Fi во всех номерах. <br>Площадь номера: 24 м² <br>Размер кровати/-ей: 2 односпальные кровати или 1 большая двуспальная кровать.</p>
+        </div>
+        <h3 class="room-popup__subtitle">Стоимость проживания </h3>
+        <p class="room-popup__elaboration">указана для 1 гостя</p>
+        <table class="room-popup__table">
+          <thead class="room-popup__thead">
+            <tr>
+              <td class="room-popup__td room-popup__td_left">Период</td>
+              <td class="room-popup__td">15 апреля – 30 мая, <br>1 июня – 10 октября</td>
+              <td class="room-popup__td">11 июня – 30 сентября</td>
+              <td class="room-popup__td">Июль, август</td>
+            </tr>
+          </thead>
+          <tr>
+            <td class="room-popup__td room-popup__td_left">Взрослый</td>
+            <td class="room-popup__td">650</td>
+            <td class="room-popup__td">650</td>
+            <td class="room-popup__td">857</td>
+          </tr>
+          <tr>
+            <td class="room-popup__td room-popup__td_left">Ребенок до 5 лет</td>
+            <td class="room-popup__td">585</td>
+            <td class="room-popup__td">585</td>
+            <td class="room-popup__td">771</td>
+          </tr>
+          <tr>
+            <td class="room-popup__td room-popup__td_left">Ребенок до 12 лет</td>
+            <td class="room-popup__td">585</td>
+            <td class="room-popup__td">585</td>
+            <td class="room-popup__td">771</td>
+          </tr>
+          <tr>
+            <td class="room-popup__td room-popup__td_left">Взрослый или ребенок <br>на дополнительное место</td>
+            <td class="room-popup__td">520</td>
+            <td class="room-popup__td">520</td>
+            <td class="room-popup__td">686</td>
+          </tr>
+          <tr>
+            <td class="room-popup__td room-popup__td_left">Одноместное размещение <br>без подселения</td>
+            <td class="room-popup__td">520</td>
+            <td class="room-popup__td">520</td>
+            <td class="room-popup__td">686</td>
+          </tr>
+        </table>
+        <div class="book-bottom book-bottom_width_100">
+          <div class="book-bottom__side book-bottom__side_left">
+            <p class="book-bottom__text">Если Вам нравится наш пансионат, то предлагаем забронировать номер для Вас.</p>
+          </div>
+          <div class="book-bottom__side book-bottom__side_right">
+            <button class="book-bottom__button _book-popup-link">Забронировать</button>
+          </div>
+        </div>
+        <h3 class="room-popup__subtitle room-popup__subtitle_center">Номера данной категории на других базах отдыха</h3>
+        <div class="similar-room room-popup__similar-room">
+          <div class="similar-room__prev"><i class="icon icon_r-prev"></i></div>
+          <div class="similar-room__items">
+            <div class="similar-room__item"><a href="javascript:;" class="similar-room__link"><img src="img/similar-room.jpg" alt="" class="similar-room__pickture">
+                <p class="similar-room__text">Зенит</p></a></div>
+            <div class="similar-room__item"><a href="javascript:;" class="similar-room__link"><img src="img/similar-room.jpg" alt="" class="similar-room__pickture">
+                <p class="similar-room__text">Полет</p></a></div>
+            <div class="similar-room__item"><a href="javascript:;" class="similar-room__link"><img src="img/similar-room.jpg" alt="" class="similar-room__pickture">
+                <p class="similar-room__text">Радуга</p></a></div>
+            <div class="similar-room__item"><a href="javascript:;" class="similar-room__link"><img src="img/similar-room.jpg" alt="" class="similar-room__pickture">
+                <p class="similar-room__text">Зенит</p></a></div>
+            <div class="similar-room__item"><a href="javascript:;" class="similar-room__link"><img src="img/similar-room.jpg" alt="" class="similar-room__pickture">
+                <p class="similar-room__text">Зенит</p></a></div>
+          </div>
+          <div class="similar-room__next"><i class="icon icon_r-next"></i></div>
+        </div>
       </div>
     </div><!--[if lt IE 9]>
     <script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -444,7 +585,11 @@
       {"src" : "libs/nice-select/jquery.nice-select.min.js", "async" : false},
       {"src" : "libs/datetimepicker/jquery.datetimepicker.full.min.js", "async" : false},
       {"src" : "https://api-maps.yandex.ru/2.1/?lang=ru_RU", "async" : false},
+      {"src" : "http://vjs.zencdn.net/5.6.0/video.js", "async" : false},
       {"src" : "libs/magnific-popup/jquery.magnific-popup.min.js", "async" : false},
+      {"src" : "libs/jcarousel/jquery.jcarousel.min.js", "async" : false},
+      {"src" : "js/carousel.js", "async" : false},
+      {"src" : "js/room-carousel.js", "async" : false},
       {"src" : "js/common.js", "async" : false}
       ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
     </script>

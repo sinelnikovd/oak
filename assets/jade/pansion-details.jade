@@ -1,7 +1,7 @@
 extends ./template/template.jade
 
 block title
-	title Семейный отдых в пансионате
+	title Пансионат «ЗЕНИТ» 
 
 block content
 	.container
@@ -57,7 +57,48 @@ block content
 
 
 		.pansion-details
-			.slider
+			.pansion-slider
+				.pansion-slider__stage
+					.pansion-slider__carousel.pansion-slider__carousel_stage
+						ul.pansion-slider__list
+							li.pansion-slider__item
+								img(src="img/pansions.jpg", alt="").pansion-slider__image
+							li.pansion-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image
+							li.pansion-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image
+							li.pansion-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image
+							li.pansion-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image
+							li.pansion-slider__item
+								img(src="img/pansions.jpg", alt="").pansion-slider__image
+					a(href="javascript:;").pansion-slider__prev.pansion-slider__prev_stage
+						span.pansion-slider__prev-icon &lsaquo;
+					a(href="javascript:;").pansion-slider__next.pansion-slider__next_stage
+						span.pansion-slider__next-icon &rsaquo;
+				.pansion-slider__navigation
+					a(href="javascript:;").pansion-slider__prev.pansion-slider__prev_navigation
+						i.icon.icon_up
+					.pansion-slider__carousel.pansion-slider__carousel_navigation
+						ul.pansion-slider__list
+							li.pansion-slider__item.pansion-slider__item_nav
+								img(src="img/pansions.jpg", alt="").pansion-slider__image.pansion-slider__image_nav
+							li.pansion-slider__item.pansion-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image.pansion-slider__image_nav
+							li.pansion-slider__item.pansion-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image.pansion-slider__image_nav
+							li.pansion-slider__item.pansion-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image.pansion-slider__image_nav
+							li.pansion-slider__item.pansion-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").pansion-slider__image.pansion-slider__image_nav
+							li.pansion-slider__item.pansion-slider__item_nav
+								img(src="img/pansions.jpg", alt="").pansion-slider__image.pansion-slider__image_nav
+					a(href="javascript:;").pansion-slider__next.pansion-slider__next_navigation
+						i.icon.icon_down
+
+
+
 			.nav-cam
 				.nav-cam__side.nav-cam__side_left
 					ul.nav
@@ -77,7 +118,11 @@ block content
 					.video-cam
 						h1.video-cam__title Веб-камера в Морском
 						p.video-cam__description Веб-камера установлена на пляже
-
+						video#my-video(controls preload="auto" poster="img/poster.jpg" data-setup="{}").video-js.video-cam__video
+							source(src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4')
+							source(src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm')
+							p.vjs-no-js To view this video please enable JavaScript, and consider upgrading to a web browser that
+								a(href="http://videojs.com/html5-video-support/" target="_blank") supports HTML5 video
 
 
 
@@ -164,13 +209,133 @@ block popup
 				label(for="email").form-book__label Почтовый адрес
 				input#email(type="text").form-book__input
 			.form-book__line
-				label(for="phone").form-book__label Телефон*
+				label(for="phone").form-book__label.form-book__label_phone Телефон*
 				input#phone(type="text").data-inputmask.form-book__input.form-book__input_phone
 			.form-book__line
 				label(for="msg").form-book__label Дополнительная информация
 				textarea#msg(rows="4").form-book__textarea
 			.form-book__line
 				button(type="submit").form-book__button Отправить
+
+
+	.room-popup
+		h2.room-popup__title Стандартный 2-местный номер с 1 кроватью (пансионат «Зенит»)
+		.room-slider
+				.room-slider__stage
+					.room-slider__carousel.room-slider__carousel_stage
+						ul.room-slider__list
+							li.room-slider__item
+								img(src="img/pansions.jpg", alt="").room-slider__image
+							li.room-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image
+							li.room-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image
+							li.room-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image
+							li.room-slider__item
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image
+							li.room-slider__item
+								img(src="img/pansions.jpg", alt="").room-slider__image
+					a(href="javascript:;").room-slider__prev.room-slider__prev_stage
+						span.room-slider__prev-icon &lsaquo;
+					a(href="javascript:;").room-slider__next.room-slider__next_stage
+						span.room-slider__next-icon &rsaquo;
+				.room-slider__navigation
+					a(href="javascript:;").room-slider__prev.room-slider__prev_navigation
+						i.icon.icon_up
+					.room-slider__carousel.room-slider__carousel_navigation
+						ul.room-slider__list
+							li.room-slider__item.room-slider__item_nav
+								img(src="img/pansions.jpg", alt="").room-slider__image.room-slider__image_nav
+							li.room-slider__item.room-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image.room-slider__image_nav
+							li.room-slider__item.room-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image.room-slider__image_nav
+							li.room-slider__item.room-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image.room-slider__image_nav
+							li.room-slider__item.room-slider__item_nav
+								img(src="http://placekitten.com/g/727/420", alt="").room-slider__image.room-slider__image_nav
+							li.room-slider__item.room-slider__item_nav
+								img(src="img/pansions.jpg", alt="").room-slider__image.room-slider__image_nav
+					a(href="javascript:;").room-slider__next.room-slider__next_navigation
+						i.icon.icon_down
+
+		p.room-popup__count-people Количество гостей: 2
+		.room-popup__text
+			p.room-popup__paragraph Номер с кондиционером, телевизором с плоским экраном и собственной ванной комнатой. В распоряжении гостей мини-бар, тапочки и бесплатная вода по прибытии. Двуспальная кровать предоставляется по запросу.
+
+			p.room-popup__paragraph Бесплатный Wi-Fi во всех номерах. <br>Площадь номера: 24 м² <br>Размер кровати/-ей: 2 односпальные кровати или 1 большая двуспальная кровать.
+
+		h3.room-popup__subtitle Стоимость проживания 
+		p.room-popup__elaboration указана для 1 гостя
+
+		table.room-popup__table
+			thead.room-popup__thead
+				tr
+					td.room-popup__td.room-popup__td_left Период
+					td.room-popup__td 15 апреля – 30 мая, <br>1 июня – 10 октября
+					td.room-popup__td 11 июня – 30 сентября
+					td.room-popup__td Июль, август
+			tr
+				td.room-popup__td.room-popup__td_left Взрослый
+				td.room-popup__td 650
+				td.room-popup__td 650
+				td.room-popup__td 857
+			tr
+				td.room-popup__td.room-popup__td_left Ребенок до 5 лет
+				td.room-popup__td 585
+				td.room-popup__td 585
+				td.room-popup__td 771
+			tr
+				td.room-popup__td.room-popup__td_left Ребенок до 12 лет
+				td.room-popup__td 585
+				td.room-popup__td 585
+				td.room-popup__td 771
+			tr
+				td.room-popup__td.room-popup__td_left Взрослый или ребенок <br>на дополнительное место
+				td.room-popup__td 520
+				td.room-popup__td 520
+				td.room-popup__td 686
+			tr
+				td.room-popup__td.room-popup__td_left Одноместное размещение <br>без подселения
+				td.room-popup__td 520
+				td.room-popup__td 520
+				td.room-popup__td 686
+
+		.book-bottom.book-bottom_width_100
+			.book-bottom__side.book-bottom__side_left
+				p.book-bottom__text Если Вам нравится наш пансионат, то предлагаем забронировать номер для Вас.
+			.book-bottom__side.book-bottom__side_right
+				button.book-bottom__button._book-popup-link Забронировать
+
+		h3.room-popup__subtitle.room-popup__subtitle_center Номера данной категории на других базах отдыха
+
+		.similar-room.room-popup__similar-room
+			.similar-room__prev
+				i.icon.icon_r-prev
+			.similar-room__items
+				.similar-room__item
+					a(href="javascript:;").similar-room__link
+						img(src="img/similar-room.jpg", alt="").similar-room__pickture
+						p.similar-room__text Зенит
+				.similar-room__item
+					a(href="javascript:;").similar-room__link
+						img(src="img/similar-room.jpg", alt="").similar-room__pickture
+						p.similar-room__text Полет
+				.similar-room__item
+					a(href="javascript:;").similar-room__link
+						img(src="img/similar-room.jpg", alt="").similar-room__pickture
+						p.similar-room__text Радуга
+				.similar-room__item
+					a(href="javascript:;").similar-room__link
+						img(src="img/similar-room.jpg", alt="").similar-room__pickture
+						p.similar-room__text Зенит
+				.similar-room__item
+					a(href="javascript:;").similar-room__link
+						img(src="img/similar-room.jpg", alt="").similar-room__pickture
+						p.similar-room__text Зенит
+			.similar-room__next
+				i.icon.icon_r-next
 
 
 
