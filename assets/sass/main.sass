@@ -38,13 +38,13 @@ body textarea:required:valid
 html
 	height: 100%
 
-$width-pading: 1280
-$width: 1280-20
+$width-pading: 1200
+$width: 1200-20
 
 
 body
 	font-size: 14px
-	min-width: 1280px
+	min-width: 1200px
 	position: relative
 	line-height: 1.3
 	font-family: Arial , $helvetica
@@ -65,7 +65,7 @@ body
 	padding-bottom: 90px
 
 .container
-	width: 1280px
+	width: 1200px
 	margin: 0 auto
 	padding: 0 10px
 	box-sizing: border-box
@@ -181,7 +181,7 @@ body
 
 /* BEGIN LOGO*/
 .logo__text
-	font-size: 25px
+	font-size: 22px
 	font-family: "HeliosCondBoldItalic" , $helvetica
 	font-weight: normal
 	text-transform: uppercase
@@ -232,7 +232,7 @@ body
 .main-menu
 	list-style-type: none
 	margin: 0
-	padding: 0 0 0 10px
+	padding: 0 0 0 13px
 	+clearfix
 .main-menu__item
 	float: left
@@ -249,7 +249,7 @@ body
 	text-decoration: none
 	color: #5f6971
 	display: block
-	padding: 42px 12px 23px
+	padding: 42px 8px 23px
 	&:hover
 		background-color: #eef1f3
 /* END MAIN-MENU */
@@ -269,14 +269,14 @@ header
 .header__search-header
 	float: left
 .header__logo
-	width: (260/$width)*100%
+	width: (250/$width)*100%
 	box-sizing: border-box
 	padding: 20px 0
 .header__main-menu,.header__search-header
-	width: (708/$width)*100%
+	width: (658/$width)*100%
 	box-sizing: border-box
 .header__search
-	width: (50/$width)*100%
+	width: (40/$width)*100%
 	box-sizing: border-box
 	display: block
 	padding: 40px 0 18px
@@ -292,7 +292,6 @@ header
 	background-color: #eef1f3
 	padding: 19px 0 22px
 	text-align: center
-	margin-left: 10px
 .header__time
 	display: block
 	font-size: 17px
@@ -391,16 +390,6 @@ header
 	width: 100%
 	z-index: 0
 	height: 930px
-	overflow: hidden
-	&:after
-		content: ''
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
-		height: 30%
-		+linear-gradient(to top, #fff, rgba(255,255,255,0) 100%)
-		background-color: transparent
 .slides__item
 	background-image: url('img/slide.jpg')
 	background-position: center center
@@ -594,7 +583,7 @@ header
 	+clearfix
 .card
 	float: left
-	width: 32%
+	width: (410/1280)*100%
 	border-radius: 5px
 	background-color: #fdfdfd
 	margin-bottom: 40px
@@ -602,7 +591,7 @@ header
 	box-shadow: 1px 1px 4px rgba(0,0,0,.25)
 	position: relative
 .card_margin
-	margin: 0 25px
+	margin: 0 (25/1280)*100%
 .card__link
 	display: block
 	color: #151515
@@ -650,9 +639,9 @@ header
 /* BEGIN MAIN-COMPANY */
 .main-company
 	float: left
-	width: 66%
+	width: (845/1280)*100%
 	height: 320px
-	margin-left: 25px
+	margin-left: (25/1280)*100%
 	+linear-gradient(to top, #f1f1f1, #fefefe)
 	border-radius: 5px
 	margin-bottom: 40px
@@ -684,7 +673,7 @@ header
 
 /* BEGIN ARTICLI */
 .article
-	width: 23.55%
+	width: (302/1280)*100%
 	height: 235px
 	background-position: center center
 	background-size: cover
@@ -692,7 +681,7 @@ header
 	border-radius: 5px
 	float: left
 	position: relative
-	margin: 0 12px
+	margin: 0 (12/1280)*100%
 	box-shadow: 1px 1px 4px rgba(0,0,0,.25)
 	&:after
 		content: ''
@@ -713,8 +702,8 @@ header
 	&:last-child
 		margin-right: 0
 .article_card
-	margin: 0 24px 40px 0
-	width: 30.8%
+	margin: 0 (22/977)*100% 40px 0
+	width: (302/977)*100%
 
 .article__link
 	display: block
@@ -807,7 +796,7 @@ header
 	&:hover
 		opacity: .8
 .client-slider__clients
-	width: 89%
+	width: (1130/1280)*100%
 /* END CLIENT SLIDER */
 
 
@@ -959,7 +948,7 @@ footer
 /* BEGIN CONTENT */
 .content
 	float: left
-	width: (958/$width)*100%
+	width: (977/1280)*100%
 .content_contact
 	width: 50%
 .content__title
@@ -1073,7 +1062,7 @@ footer
 /* BEGIN SIDEBAR */
 .sidebar
 	float: right
-	width: (302/$width)*100%
+	width: (302/1280)*100%
 	padding-top: 38px
 .sidebar_left
 	float: left
@@ -1217,14 +1206,14 @@ footer
 /* BEGIN CARD-PANSIONS */
 .card-pansions
 	float: left
-	width: 31%
+	width: (303/977)*100%
 	border-radius: 5px
 	background-color: #fdfdfd
 	margin-bottom: 50px
 	overflow: hidden
 	box-shadow: -1px 1px 4px rgba(0,0,0,.25)
 	position: relative
-	margin-right: 22px
+	margin-right: (22/977)*100%
 .card-pansions__link
 	display: block
 	color: #151515
@@ -1274,7 +1263,7 @@ footer
 /* BEGIN ACTION-CARD */
 .action-card
 	float: left
-	width: 31%
+	width: (303/977)*100%
 	height: 315px
 	border-radius: 5px
 	background-color: #fdfdfd
@@ -1282,7 +1271,7 @@ footer
 	overflow: hidden
 	box-shadow: -1px 1px 4px rgba(0,0,0,.25)
 	position: relative
-	margin-right: 22px
+	margin-right: (22/977)*100%
 	text-align: center
 	background-position: center center
 	background-repeat: no-repeat
@@ -1817,8 +1806,8 @@ footer
 /* BEGIN PANSION-DETAILS */
 .pansion-details
 	float: left
-	width: (938/$width)*100%
-	margin-left: (20/$width)*100%
+	width: (957/1280)*100%
+	margin-left: (20/1280)*100%
 
 /* END PANSION-DETAILS */
 
@@ -2410,14 +2399,14 @@ footer
 			&.inactive
 				display: none
 .pansion-slider__carousel_stage
-	height: 420px
+	height: 395px
 
 .pansion-slider__navigation
 	float: left
 	margin-left: (25/938)*100%
 	width: (186/938)*100%
 .pansion-slider__carousel_navigation
-	height: 360px
+	height: 330px
 
 .pansion-slider__list
 	margin: 0

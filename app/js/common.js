@@ -17,7 +17,10 @@ $(document).ready(function() {
 		dotsContainer: '.slides-nav__dots',
 		nav: false,
 		dots: true,
-		items: 1
+		items: 1,
+		autoplayTimeout: 5000,
+		autoplay: true,
+		autoplaySpeed: 500
 	})
 	$('.slides-nav__prev').click(function() {
 		slides.trigger('prev.owl.carousel');

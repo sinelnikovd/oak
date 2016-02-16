@@ -53,7 +53,7 @@
               <p class="slides__description">Приглашаем отметить Новый год в пансионате всей семьёй и провести новогодний отпуск на берегу моря</p>
             </div>
           </div>
-          <div style="background-image: url('http://placekitten.com/g/1920/929')" class="slides__item">
+          <div class="slides__item">
             <div class="container">
               <h2 class="slides__title">Каникулы в &#171;Зените&#187;</h2>
               <p class="slides__description">Приглашаем отметить Новый год в пансионате всей семьёй и провести новогодний отпуск на берегу моря</p>
@@ -108,7 +108,7 @@
         </div>
       </div>
       <div class="main-content">
-        <div class="container"><a href="#" class="book-in-site"><i class="icon icon_book book-in-site__icon"></i><span class="book-in-site__text">Забронируйте номер прямо на сайте. Оставьте заявку просто и быстро.</span></a>
+        <div class="container"><a href="#" class="book-in-site _book-popup-link"><i class="icon icon_book book-in-site__icon"></i><span class="book-in-site__text">Забронируйте номер прямо на сайте. Оставьте заявку просто и быстро.</span></a>
           <div class="cards">
             <div class="card">
               <div class="card__heading"><a href="#" class="card__link">
@@ -203,7 +203,7 @@
               <li class="main-news__item"><a href="javascript:;" class="main-news__link main-news__link_posts">Статьи</a></li>
             </ul>
             <div class="main-news__section main-news__section_news open">
-              <div style="background-image: url('img/article.jpg');" class="article article_first"><a href="#" class="article__link">
+              <div style="background-image: url('img/article.jpg');" class="article"><a href="#" class="article__link">
                   <div class="article__description">
                     <snap class="article__date">6.12.2015</snap>
                     <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
@@ -218,7 +218,7 @@
                     <snap class="article__date">6.12.2015</snap>
                     <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
                   </div></a></div>
-              <div style="background-image: url('img/article3.jpg');" class="article article_last"><a href="#" class="article__link">
+              <div style="background-image: url('img/article3.jpg');" class="article"><a href="#" class="article__link">
                   <div class="article__description">
                     <snap class="article__date">6.12.2015</snap>
                     <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
@@ -226,7 +226,7 @@
             </div>
           </div>
           <div class="main-news__section main-news__section_posts">
-            <div style="background-image: url('img/article.jpg');" class="article article_first"><a href="#" class="article__link">
+            <div style="background-image: url('img/article.jpg');" class="article"><a href="#" class="article__link">
                 <div class="article__description">
                   <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
                 </div></a></div>
@@ -238,7 +238,7 @@
                 <div class="article__description">
                   <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
                 </div></a></div>
-            <div style="background-image: url('img/article3.jpg');" class="article article_last"><a href="#" class="article__link">
+            <div style="background-image: url('img/article3.jpg');" class="article"><a href="#" class="article__link">
                 <div class="article__description">
                   <h3 class="article__title">Каникулы "Дикий запад" в "Зените"</h3>
                 </div></a></div>
@@ -296,6 +296,96 @@
       </div>
     </footer>
     <div class="hidden">
+      <div class="book-popup">
+        <h2 class="book-popup__title">Оставить заявку</h2>
+        <p class="book-popup__description">Уточните свой запрос и наш менеджер свяжется с  вами по наличию свободных мест</p>
+        <p class="book-popup__mandatory">* обязательные для заполнения поля</p>
+        <form action="/" class="form-book">
+          <div class="form-book__sides">
+            <div class="form-book__side form-book__side_left">
+              <div class="form-book__control">
+                <label for="pansions" class="form-book__label">Пансионат*</label>
+                <select id="pansions" name="" class="form-book__select wide">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-book__side form-book__side_right">
+              <div class="form-book__control">
+                <label for="cat-room" class="form-book__label">Категория номера*</label>
+                <select id="cat-room" name="" class="form-book__select wide">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-book__side form-book__side_left">
+              <div class="form-book__control">
+                <label for="datein-book" class="form-book__label">Дата заезда*</label>
+                <input id="datein-book" type="text" class="form-book__input form-book__input_date datetimepicker">
+              </div>
+            </div>
+            <div class="form-book__side form-book__side_right">
+              <div class="form-book__control">
+                <label for="dateout-book" class="form-book__label">Дата отъезда*</label>
+                <input id="dateout-book" type="text" class="form-book__input form-book__input_date datetimepicker">
+              </div>
+            </div>
+          </div>
+          <div class="form-book__sides">
+            <div class="form-book__side form-book__side_pepole form-book__side_left">
+              <div class="form-book__control">
+                <label for="adult-count" class="form-book__label">Количество взрослых</label>
+                <select id="adult-count" name="" class="form-book__select wide">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-book__side form-book__side_pepole form-book__side_right">
+              <div class="form-book__control">
+                <label for="kid-count" class="form-book__label">Количество детей</label>
+                <select id="kid-count" name="" class="form-book__select wide">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-book__line">
+            <input id="transfer" type="checkbox" class="form-book__checkbox">
+            <label for="transfer" class="form-book__label form-book__label_transfer">Нужен трансфер*</label>
+          </div>
+          <div class="form-book__line">
+            <label for="email" class="form-book__label">Почтовый адрес</label>
+            <input id="email" type="text" class="form-book__input">
+          </div>
+          <div class="form-book__line">
+            <label for="phone" class="form-book__label form-book__label_phone">Телефон*</label>
+            <input id="phone" type="text" class="data-inputmask form-book__input form-book__input_phone">
+          </div>
+          <div class="form-book__line">
+            <label for="msg" class="form-book__label">Дополнительная информация</label>
+            <textarea id="msg" rows="4" class="form-book__textarea"></textarea>
+          </div>
+          <div class="form-book__line">
+            <button type="submit" class="form-book__button">Отправить</button>
+          </div>
+        </form>
+      </div>
     </div><!--[if lt IE 9]>
     <script src="libs/html5shiv/es5-shim.min.js"></script>
     <script src="libs/html5shiv/html5shiv.min.js"></script>
