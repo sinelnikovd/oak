@@ -391,6 +391,16 @@ header
 	width: 100%
 	z-index: 0
 	height: 930px
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 30%
+		+linear-gradient(to top, #fff, rgba(255,255,255,0) 100%)
+		background-color: transparent
 .slides__item
 	background-image: url('img/slide.jpg')
 	background-position: center center
