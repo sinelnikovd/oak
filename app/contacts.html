@@ -45,35 +45,107 @@
           <div class="header__call"><span class="header__call-label">Звоните круглосуточно:</span><a href="tel:84959918855" class="header__phone">(495) 991-88-55</a></div>
         </div>
       </header>
-      <div class="container container_clearfix">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a> /</li>
+          <li class="breadcrumbs__item">Контакты</li>
+        </ul>
+      </div>
+      <div class="container">
         <div class="content content_contact">
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a> /</li>
-            <li class="breadcrumbs__item">Контакты</li>
-          </ul>
           <h1 class="content__title content__title_h1">Контакты</h1>
-          <div class="contact">
-            <h2 class="contact__title">Адрес:</h2>
-            <p class="contact__text">МО, Мытищинский р-н, пос. Менжинец, <br>ул. Планерная, вл. 2</p>
-            <h2 class="contact__title">Телефон:</h2>
-            <p class="contact__text"> <a href="tel:84951111111" class="contact__link">(495) 111-11-11</a></p>
-            <h2 class="contact__title">E-mail:</h2>
-            <p class="contact__text"> <a href="mailto:oak@bazy.ru" class="contact__link">oak@bazy.ru</a></p>
-            <h2 class="contact__title">Как проехать:</h2>
-            <p class="contact__text">Ж\д – Электропоездом с Савеловского вокзала до платформы «Трудовая», выход из первого вагона в сторону области. По прибытию на станцию «Трудовая» по ходу электропоезда идти направо по тоннелю до автобусной остановки дер. Хлябово.</p>
-            <p class="contact__text">А/м – по Дмитровскому шоссе до указателя 43 км., поворот направо на дер. Хлябово, далее 3 км. до МБО «Чайка».</p>
-            <form action="/" class="contact-form">
-              <h2 class="contact-form__title">Задать вопрос:</h2>
-              <p class="contact-form__description">Уточните свой вопросы, и мы ответим Вам в течение 1-2 рабочих дней.</p>
-              <input type="text" placeholder="Фамилия, имя, отчество" class="contact-form__input">
-              <input type="text" placeholder="E-mail" required class="contact-form__input">
-              <input type="text" placeholder="Телефон" class="contact-form__input data-inputmask">
-              <textarea rows="8" placeholder="Текст сообщения" class="contact-form__textarea"></textarea><span class="contact-form__mandatory">Все поля обязательны для заполнения.</span>
-              <button type="submit" class="contact-form__button">Отправить</button>
-            </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="accordion">
+          <div class="accordion__item active">
+            <div class="contact">
+              <h2 class="contact__title">База отдыха «Чайка»</h2>
+              <p class="contact__term">Адрес:</p>
+              <p class="contact__text">МО, Мытищинский р-н, пос. Менжинец, ул. Планерная, вл. 2</p>
+              <div class="contact__body active">
+                <p class="contact__term">Телефон:</p>
+                <p class="contact__text"> <a href="tel:84951111111" class="contact__link">(495) 111-11-11</a></p>
+                <p class="contact__term">E-mail:</p>
+                <p class="contact__text"> <a href="mailto:oak@bazy.ru" class="contact__link">oak@bazy.ru</a></p>
+                <p class="contact__term">Как проехать:</p>
+                <p class="contact__text">Ж\д – Электропоездом с Савеловского вокзала до платформы «Трудовая», выход из первого вагона в сторону области. По прибытию на станцию «Трудовая» по ходу электропоезда идти направо по тоннелю до автобусной остановки дер. Хлябово.</p>
+                <p class="contact__text">А/м – по Дмитровскому шоссе до указателя 43 км., поворот направо на дер. Хлябово, далее 3 км. до МБО «Чайка».</p>
+              </div>
+            </div>
+            <div id="map" class="maps active"></div>
+            <div class="clearfix"></div>
+            <div class="accordion__slide open">Свернуть</div>
+          </div>
+          <div class="accordion__item">
+            <div class="contact">
+              <h2 class="contact__title">База отдыха «Чайка»</h2>
+              <p class="contact__term">Адрес:</p>
+              <p class="contact__text">МО, Мытищинский р-н, пос. Менжинец, ул. Планерная, вл. 2</p>
+              <div class="contact__body">
+                <p class="contact__term">Телефон:</p>
+                <p class="contact__text"> <a href="tel:84951111111" class="contact__link">(495) 111-11-11</a></p>
+                <p class="contact__term">E-mail:</p>
+                <p class="contact__text"> <a href="mailto:oak@bazy.ru" class="contact__link">oak@bazy.ru</a></p>
+                <p class="contact__term">Как проехать:</p>
+                <p class="contact__text">Ж\д – Электропоездом с Савеловского вокзала до платформы «Трудовая», выход из первого вагона в сторону области. По прибытию на станцию «Трудовая» по ходу электропоезда идти направо по тоннелю до автобусной остановки дер. Хлябово.</p>
+                <p class="contact__text">А/м – по Дмитровскому шоссе до указателя 43 км., поворот направо на дер. Хлябово, далее 3 км. до МБО «Чайка».</p>
+              </div>
+            </div>
+            <div id="map1" class="maps"></div>
+            <div class="clearfix"></div>
+            <div class="accordion__slide">Подробнее</div>
+          </div>
+          <div class="accordion__item">
+            <div class="contact">
+              <h2 class="contact__title">База отдыха «Чайка»</h2>
+              <p class="contact__term">Адрес:</p>
+              <p class="contact__text">МО, Мытищинский р-н, пос. Менжинец, ул. Планерная, вл. 2</p>
+              <div class="contact__body">
+                <p class="contact__term">Телефон:</p>
+                <p class="contact__text"> <a href="tel:84951111111" class="contact__link">(495) 111-11-11</a></p>
+                <p class="contact__term">E-mail:</p>
+                <p class="contact__text"> <a href="mailto:oak@bazy.ru" class="contact__link">oak@bazy.ru</a></p>
+                <p class="contact__term">Как проехать:</p>
+                <p class="contact__text">Ж\д – Электропоездом с Савеловского вокзала до платформы «Трудовая», выход из первого вагона в сторону области. По прибытию на станцию «Трудовая» по ходу электропоезда идти направо по тоннелю до автобусной остановки дер. Хлябово.</p>
+                <p class="contact__text">А/м – по Дмитровскому шоссе до указателя 43 км., поворот направо на дер. Хлябово, далее 3 км. до МБО «Чайка».</p>
+              </div>
+            </div>
+            <div id="map2" class="maps"></div>
+            <div class="clearfix"></div>
+            <div class="accordion__slide">Подробнее</div>
+          </div>
+          <div class="accordion__item">
+            <div class="contact">
+              <h2 class="contact__title">База отдыха «Чайка»</h2>
+              <p class="contact__term">Адрес:</p>
+              <p class="contact__text">МО, Мытищинский р-н, пос. Менжинец, ул. Планерная, вл. 2</p>
+              <div class="contact__body">
+                <p class="contact__term">Телефон:</p>
+                <p class="contact__text"> <a href="tel:84951111111" class="contact__link">(495) 111-11-11</a></p>
+                <p class="contact__term">E-mail:</p>
+                <p class="contact__text"> <a href="mailto:oak@bazy.ru" class="contact__link">oak@bazy.ru</a></p>
+                <p class="contact__term">Как проехать:</p>
+                <p class="contact__text">Ж\д – Электропоездом с Савеловского вокзала до платформы «Трудовая», выход из первого вагона в сторону области. По прибытию на станцию «Трудовая» по ходу электропоезда идти направо по тоннелю до автобусной остановки дер. Хлябово.</p>
+                <p class="contact__text">А/м – по Дмитровскому шоссе до указателя 43 км., поворот направо на дер. Хлябово, далее 3 км. до МБО «Чайка».</p>
+              </div>
+            </div>
+            <div id="map3" class="maps"></div>
+            <div class="clearfix"></div>
+            <div class="accordion__slide">Подробнее</div>
           </div>
         </div>
-        <div id="map" class="maps"></div>
+      </div>
+      <div class="container">
+        <form action="/" class="contact-form">
+          <h2 class="contact-form__title">Задать вопрос:</h2>
+          <p class="contact-form__description">Уточните свой вопросы, и мы ответим Вам в течение 1-2 рабочих дней.</p>
+          <input type="text" placeholder="Фамилия, имя, отчество" class="contact-form__input">
+          <input type="text" placeholder="E-mail" required class="contact-form__input">
+          <input type="text" placeholder="Телефон" class="contact-form__input data-inputmask">
+          <textarea rows="8" placeholder="Текст сообщения" class="contact-form__textarea"></textarea><span class="contact-form__mandatory">Все поля обязательны для заполнения.</span>
+          <button type="submit" class="contact-form__button">Отправить</button>
+        </form>
       </div>
       <div class="container">
         <div class="subscription subscription_margin_big">

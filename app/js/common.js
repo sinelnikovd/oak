@@ -168,8 +168,8 @@ $(document).ready(function() {
 
 	ymaps.ready(initMap);
 	function initMap(){   
-		if($('div').is('#map')) {
-			var map = new ymaps.Map("map", {
+		$('.maps').each(function () {
+			var map = new ymaps.Map( $(this).attr('id') , {
 				center: [56.11601016, 37.57489343],
 				zoom: 12,
 				controls: ["smallMapDefaultSet"]
@@ -188,8 +188,12 @@ $(document).ready(function() {
 			});
 
 			map.geoObjects.add(Placemark);
-		}
+		});
+		
 	}
+
+
+
 
 	$('.header__search').click(function () {
 		if($('.search-header').is(':visible')){
@@ -259,6 +263,37 @@ $(document).ready(function() {
 		$(this).closest('.similar-room').find('.similar-room__items').trigger('next.owl.carousel');
 	});
 
+
+	$('.accordion__slide').click(function () {
+		var th = $(this),
+				el = th.closest('.accordion__item');
+		if(!$(this).hasClass('open')){
+			el.find('.maps').show();
+			el.find('.contact__body').addClass('active');
+			el.find('.contact').css('width','50%');
+			var curHeight = el.height(),
+					autoHeight = el.css('height', 'auto').outerHeight();
+
+			el.height(curHeight).animate({height: autoHeight - 50}, 500,function(){
+				th.text('Свернуть');
+				el.addClass('active');
+				th.addClass('open');
+			});
+			//el.find('.product-popup__dropdown-before').slideUp(500);
+
+		}else{
+				el.animate({height: 130}, 500,function(){
+				th.text('Подробнее');
+				el.removeClass('active');
+				th.removeClass('open');
+				el.find('.maps').hide();
+				el.find('.contact__body').removeClass('active');
+				el.find('.contact').css('width','100%');
+			});
+			//el.find('.product-popup__dropdown-before').slideDown(500);
+
+		}
+	});
 
 
 

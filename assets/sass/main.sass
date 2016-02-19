@@ -960,7 +960,8 @@ footer
 	float: left
 	width: (977/1280)*100%
 .content_contact
-	width: 50%
+	float: none
+	width: 100%
 .content__title
 	margin: 0
 .content__title_h1
@@ -1617,30 +1618,68 @@ footer
 
 /* BEGIN MAPS */
 .maps
-	margin-top: 110px
+	margin-top: 70px
 	float: left
 	width: 50%
 	height: 300px
 	border-radius: 5px
 	overflow: hidden
 	box-shadow: -1px 1px 3px rgba(0,0,0,.25)
-
+	display: none
 	position: relative
 
 	/* chrome bug fix */
-	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)
+	&.active
+		display: block
 /* END MAPS */
 
 
 
 
-
+/* BEGIN ACCORDION */
+.accordion
+	+clearfix
+.accordion__item
+	border-bottom: 1px solid #cccfd1
+	padding: 20px 0 30px
+	height: 130px
+	overflow: hidden
+	position: relative
+	+clearfix
+	&.active
+		height: auto
+		overflow: visible
+.accordion__slide
+	position: absolute
+	left: 0
+	bottom: 10px
+	color: #506982
+	cursor: pointer
+	&:hover
+		text-decoration: underline
+.contact__body
+	display: none
+	&.active
+		display: block
+.clearfix
+	+clearfix
+/* END ACCORDION */
 
 
 /* BEGIN CONTACT */
 .contact
-	margin-right: 25px
+	float: left
+	padding-right: 20px
+	width: 50%
+	box-sizing: border-box
 .contact__title
+	font-size: 19px
+	font-family: "HeliosCondRegular" , $helvetica
+	font-weight: normal
+	color: #506982
+	text-transform: uppercase
+.contact__term
 	margin: 20px 0 0
 	font-size: 19px
 	font-family: "HeliosCondRegular" , $helvetica
